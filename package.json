@@ -1,5 +1,5 @@
 {
-  "author": "Volkov Labs",
+  "author": "Grafana Labs",
   "dependencies": {
     "@emotion/css": "^11.13.5",
     "@grafana/data": "^12.0.1",
@@ -29,6 +29,7 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.14",
+    "@types/testing-library__jest-dom": "^5.14.9",
     "@types/lodash": "^4.17.20",
     "@types/node": "^24.1.0",
     "@types/react-beautiful-dnd": "^13.1.8",
@@ -81,7 +82,8 @@
     "test:e2e": "npx playwright test",
     "test:e2e:dev": "npx playwright test --ui",
     "test:e2e:docker": "docker compose --profile e2e up --exit-code-from test",
+    "typecheck": "tsc --noEmit",
     "upgrade": "npm upgrade --save"
   },
-  "version": "5.0.0"
+  "version": "5.1.0"
 }
