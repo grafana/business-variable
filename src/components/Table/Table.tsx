@@ -206,7 +206,7 @@ export const Table = <TTableData extends TableItem>({
     count: rows.length,
     estimateSize: useCallback(() => 38, []),
     measureElement: useCallback((el: HTMLElement | HTMLTableRowElement) => el.offsetHeight, []),
-    overscan: 10,
+    overscan: 100,
   });
 
   useEffect(() => {
