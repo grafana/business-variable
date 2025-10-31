@@ -35,7 +35,7 @@ This project is currently maintained by Grafana Labs. We welcome pull requests a
 
 ## 🛠️ Installation
 
-Install the Business Variable panel via the [Grafana Plugins Catalog](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/) or using the Grafana CLI:
+Install the Business Variable panel through the [Grafana Plugins Catalog](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/) or using the Grafana CLI:
 
 ```bash
 grafana-cli plugins install volkovlabs-variable-panel
