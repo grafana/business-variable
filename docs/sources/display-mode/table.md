@@ -246,7 +246,7 @@ The Business Variable panel moves the selected tab to the far left among all oth
 The Business Variable panel supports this feature starting from version 3.0.0.
 {{< /admonition >}}
 
-You might have cloned Business Variable panels across many dashboards. When you use this setup, users can [switch to a different dashboard](/blog/variable-panel-2.2.0-20231130/#dashboard-redirect-option) seamlessly. To enhance the user experience, you can save the selected tab when redirecting users and open the new dashboard with the previously selected tab.
+You might have cloned Business Variable panels across many dashboards. When you use this setup, users can [switch to a different dashboard](https://volkovlabs.io/blog/variable-panel-2.2.0-20231130/#dashboard-redirect-option) seamlessly. To enhance the user experience, you can save the selected tab when redirecting users and open the new dashboard with the previously selected tab.
 
 To configure tab preservation, use the **Selected group id** parameter from the **Groups** category. Choose a unique word and specify it across all dashboards where you have the Business Variable panel and need to preserve the selected tab.
 
@@ -282,7 +282,7 @@ To better understand this parameter, review the following concepts:
 - _dashboard variable refresh/update_
 - _dashboard variable reset_
 
-A [_dashboard variable_](/grafana/variables/) is a set of values retrieved following rules set by a dashboard developer. For simplicity, we call these rules a _dashboard variable query_.
+A [_dashboard variable_](https://volkovlabs.io/grafana/variables/) is a set of values retrieved following rules set by a dashboard developer. For simplicity, we call these rules a _dashboard variable query_.
 
 A _dashboard variable_ can have a _selected current value_ (or values).
 

@@ -32,7 +32,7 @@ Follow the links below to learn about each display mode.
 
 | Section                 | Description                                                    |
 | ----------------------- | -------------------------------------------------------------- |
-| [Table](../table)       | From simple lists to elaborated TreeViews                      |
-| [Minimize](../minimize) | Minimalistic design, similar to the native dashboard variables |
-| [Button](../button)     | The choice looks like a set of on/off buttons                  |
-| [Slider](../slider)     | Laconic slider for a simple one-value choice                   |
+| [Table](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/display-mode/table/)       | From simple lists to elaborated TreeViews                      |
+| [Minimize](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/display-mode/minimize) | Minimalistic design, similar to the native dashboard variables |
+| [Button](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/display-mode/button)     | The choice looks like a set of on/off buttons                  |
+| [Slider](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/display-mode/slider)     | Laconic slider for a simple one-value choice                   |

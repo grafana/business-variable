@@ -14,7 +14,7 @@ weight: 10
 
 The Business Variable panel builds on top of regular dashboard variables. You can place dashboard filters in a separate panel anywhere on the dashboard.
 
-The Business Variable panel offers many layouts with robust options, including an advanced TreeView layout. With the latest updates, you can [switch between dashboards](/plugins/business-variable/redirect) for a better user experience.
+The Business Variable panel offers many layouts with robust options, including an advanced TreeView layout. With the latest updates, you can [switch between dashboards](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/features/redirect/) for a better user experience.
 
 ## Requirements
 
@@ -64,18 +64,18 @@ For an overview of all plugin options, watch the following video.
 
 {{< youtube id="1ogv2jstrlI" >}}
 
-To learn more about this plugin, see [Tutorials](/plugins/business-variable/tutorials).
+To learn more about this plugin, see [Tutorials](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/tutorials/).
 
 ## Documentation
 
 | Section                   | Description                              |
 | ------------------------- | ---------------------------------------- |
-| [Data flow](data-flow/)   | Explains the Business Variable data flow |
-| [Display mode](layout/)  | Explains different display modes         |
-| [Features](features)      | Explains panel features                  |
-| [Tutorials](tutorials)    | Easy to follow tutorials                 |
-| [Release notes](release/) | The latest features and updates          |
+| [Data flow](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/data-flow/)   | Explains the Business Variable data flow |
+| [Display mode](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/display-mode/)  | Explains different display modes         |
+| [Features](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/features/)      | Explains panel features                  |
+| [Tutorials](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/tutorials/)    | Easy to follow tutorials                 |
+| [Release notes](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/release/) | The latest features and updates          |
 
 ## License
 
-Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-variable/blob/main/LICENSE).
+Apache License Version 2.0, see [LICENSE](https://github.com/grafana/business-variable/blob/main/LICENSE).
