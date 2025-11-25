@@ -1,13 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/blog/2023-12-14-variable-panel-2.3.1/persist-on-off.png
-title: 'Persistent Mode'
-description: 'Learn how to use Persistent Mode to store selected variable values in browser local storage across dashboard sessions.'
+title: Persistent Mode
+description: Learn how to use Persistent Mode to store selected variable values in
+  browser local storage across dashboard sessions.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 400
 ---
 

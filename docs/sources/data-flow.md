@@ -1,14 +1,15 @@
 ---
-tags:
-  - Business Variable
-image: /img/plugins/business-variable/flow-var-panel.png
-hide_table_of_contents: true
-title: 'Data Flow'
-description: 'Learn how the Business Variable panel uses dashboard variables as data sources and optionally connects to data sources for status indicators and TreeView relationships.'
+title: Data Flow
+description: Learn how the Business Variable panel uses dashboard variables as data
+  sources and optionally connects to data sources for status indicators and TreeView
+  relationships.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 20
 ---
 

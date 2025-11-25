@@ -1,13 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/plugins/business-variable/flow-var-panel.png
-title: 'Minimize'
-description: 'Learn how to use the Minimize display mode to create compact dropdown selectors for Query and Custom variables with manual entry support.'
+title: Minimize
+description: Learn how to use the Minimize display mode to create compact dropdown
+  selectors for Query and Custom variables with manual entry support.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 200
 ---
 

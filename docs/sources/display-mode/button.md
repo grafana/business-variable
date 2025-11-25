@@ -1,13 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/plugins/business-variable/button-mode.png
-title: 'Button'
-description: 'Learn how to use the Button display mode to show variable values as horizontally positioned buttons with optional color-coding.'
+title: Button
+description: Learn how to use the Button display mode to show variable values as horizontally
+  positioned buttons with optional color-coding.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 300
 ---
 

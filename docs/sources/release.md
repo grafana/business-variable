@@ -1,15 +1,15 @@
 ---
-tags:
-  - Business Variable
-  - Release Notes
-image: /img/suite.png
-hide_table_of_contents: true
-title: 'Release Notes'
-description: 'Learn about the latest features, enhancements, fixes, and breaking changes across all versions of the Business Variable panel.'
+title: Release Notes
+description: Learn about the latest features, enhancements, fixes, and breaking changes
+  across all versions of the Business Variable panel.
+keywords:
+- business variable
+- release notes
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 60
 ---
 

@@ -1,13 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/blog/2023-11-30-variable-panel-2.2.0/vars.png
-title: 'Redirect Dashboards'
-description: 'Learn how to configure dashboard redirects that open corresponding dashboards based on variable value selections.'
+title: Redirect Dashboards
+description: Learn how to configure dashboard redirects that open corresponding dashboards
+  based on variable value selections.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 500
 ---
 

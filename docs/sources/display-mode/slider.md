@@ -1,13 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/plugins/business-variable/flow-var-panel.png
-title: 'Slider'
-description: 'Learn how to use the Slider display mode for single-value selection from long lists of numeric or text values.'
+title: Slider
+description: Learn how to use the Slider display mode for single-value selection from
+  long lists of numeric or text values.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 400
 ---
 

@@ -1,14 +1,12 @@
 ---
-tags:
-  - Business Variable
-image: /img/plugins/business-variable/dashboard.png
-hide_table_of_contents: true
-title: 'Business Variable'
-description: 'Learn how to use the Business Variable panel to create customizable dashboard filters with multiple display modes and layouts.'
+title: Business Variable
+description: Learn how to use the Business Variable panel to create customizable dashboard
+  filters with multiple display modes and layouts.
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 10
 ---
 

@@ -1,13 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/plugins/business-variable/input.png
-title: 'Input Text Box'
-description: 'Learn how to use the Input Text Box feature in Table and Minimize display modes with sticky positioning support.'
+title: Input Text Box
+description: Learn how to use the Input Text Box feature in Table and Minimize display
+  modes with sticky positioning support.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 600
 ---
 

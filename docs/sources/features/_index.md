@@ -1,14 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/plugins/business-variable/dashboard.png
-hide_table_of_contents: true
-title: 'Features'
-description: 'Learn about the extensive features of the Business Variable panel including sorting, key-value formats, and dashboard redirects.'
+title: Features
+description: Learn about the extensive features of the Business Variable panel including
+  sorting, key-value formats, and dashboard redirects.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 40
 ---
 # Features

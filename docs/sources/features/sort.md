@@ -1,13 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/plugins/business-variable/sorting.png
-title: 'Sort by Status'
-description: 'Learn how to enable sorting of variable panel values based on numeric data retrieved from your data source.'
+title: Sort by Status
+description: Learn how to enable sorting of variable panel values based on numeric
+  data retrieved from your data source.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 100
 ---
 

@@ -1,13 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/plugins/business-variable/flow-var-panel.png
-title: 'Table'
-description: 'Learn how to use the Table display mode to create single variable lists, multi-level TreeViews, and hierarchical structures with status indicators.'
+title: Table
+description: Learn how to use the Table display mode to create single variable lists,
+  multi-level TreeViews, and hierarchical structures with status indicators.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 100
 ---
 

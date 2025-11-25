@@ -1,13 +1,14 @@
 ---
-tags:
-  - Business Variable
-hide_table_of_contents: true
-title: 'Tutorials'
-description: 'Learn how to use the Business Variable panel through step-by-step video tutorials showcasing features and common use cases.'
+title: Tutorials
+description: Learn how to use the Business Variable panel through step-by-step video
+  tutorials showcasing features and common use cases.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 50
 ---
 

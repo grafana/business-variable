@@ -1,14 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/plugins/business-variable/flow-var-panel.png
-hide_table_of_contents: true
-title: 'Display mode'
-description: 'Learn about the four available display modes for the Business Variable panel: Table, Minimize, Button, and Slider.'
+title: Display mode
+description: Learn about the four available display modes for the Business Variable
+  panel: Table, Minimize, Button, and Slider.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 30
 ---
 

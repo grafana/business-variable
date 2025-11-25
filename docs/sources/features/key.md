@@ -1,13 +1,14 @@
 ---
-tags:
-  - Business Variable
-image: /img/blog/2023-08-10-variable-panel-1.7.0/key-value.png
-title: 'Key-values format in Variables'
-description: 'Learn how to use key-value pairs in variables to join data sets by IDs while displaying user-friendly names.'
+title: Key-values format in Variables
+description: Learn how to use key-value pairs in variables to join data sets by IDs
+  while displaying user-friendly names.
+keywords:
+- business variable
 labels:
   products:
-    - enterprise
-    - oss
+  - cloud
+  - enterprise
+  - oss
 weight: 200
 ---
 
