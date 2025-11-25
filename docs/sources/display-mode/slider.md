@@ -15,7 +15,6 @@ weight: 400
 # Slider
 
 {{< admonition type="note" >}}
-
 The Business Variable panel supports the **Slider** display mode starting from version 3.0.0.
 {{< /admonition >}}
 
@@ -35,7 +34,6 @@ When a dashboard variable contains a massive volume of values and only one selec
 />
 
 {{< admonition type="note" >}}
-
 The **Slider** display mode works only for the Single-value dashboard variables.
 {{< /admonition >}}
 

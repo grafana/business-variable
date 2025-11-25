@@ -39,9 +39,7 @@ Below is one of our YouTube videos with a use-case review. It features three ope
 
 ### Implementation details
 
-You can find implementation details in the blog post.
-
-<BlogPost id="form-panel-file-upload-20240310" />
+You can find implementation details in this [blog post](https://volkovlabs.io/blog/form-panel-file-upload-20240310/).
 
 ## Business Variable panel functionality
 

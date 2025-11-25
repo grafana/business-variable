@@ -15,7 +15,6 @@ weight: 400
 # Persistent Mode
 
 {{< admonition type="note" >}}
-
 Variable panel supports redirects since version 2.3.1.
 {{< /admonition >}}
 
@@ -31,7 +30,7 @@ When **Enabled**, the selected values are stored in the browser's local storage.
 
 For instance, in the illustration below, I have two variable panels. One displays countries and the other one displays states within the selected country. I chose **USA** in the first panel and then **IL** on the other panel.
 
-Depending on the **Persistent** option value set for the **State** variable panel, the selected value is either <u>saved</u> in the browser for future use or <u>not</u>.
+Depending on the **Persistent** option value set for the **State** variable panel, the selected value is either _saved_ in the browser for future use or _not_.
 
 <Image
   title="Persistent option allows to keep the selected values in the browser's local cache."

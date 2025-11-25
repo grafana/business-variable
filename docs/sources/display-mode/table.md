@@ -265,7 +265,6 @@ You can enable the **Sticky** option to ensure the Business Variable panel is al
 ### Clean filter value button
 
 {{< admonition type="note" >}}
-
 The Business Variable panel supports this feature starting from version 2.2.0.
 {{< /admonition >}}
 
@@ -280,7 +279,6 @@ It is a small, but very nice feature. Once you start typing in the search text f
 ### Always Visible Search option
 
 {{< admonition type="note" >}}
-
 The Business Variable panel supports this feature starting from version 2.2.0.
 {{< /admonition >}}
 
@@ -298,7 +296,6 @@ When it is **Enabled**, the funnel icon is hidden and users are not capable of h
 ## Total and selected values count
 
 {{< admonition type="note" >}}
-
 The Business Variable panel supports this feature starting from version 3.0.0.
 {{< /admonition >}}
 
@@ -314,7 +311,6 @@ This parameter is the enable/disable type. The total count appears next to the h
 ## Tab auto-grouping
 
 {{< admonition type="note" >}}
-
 The Business Variable panel supports this feature starting from version 3.0.0.
 {{< /admonition >}}
 
@@ -330,7 +326,6 @@ The Business Variable panel shifts the selected tab on the very left among all o
 ## Selected tab preservation
 
 {{< admonition type="note" >}}
-
 The Business Variable panel supports this feature starting from version 3.0.0.
 {{< /admonition >}}
 
@@ -361,7 +356,6 @@ Grafana Thresholds functionality provides a better visual representation of data
 ## Advanced. Select dependent variable to reset
 
 {{< admonition type="note" >}}
-
 The Business Variable panel supports this feature starting from version 3.0.0.
 {{< /admonition >}}
 

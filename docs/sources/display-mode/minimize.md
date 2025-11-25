@@ -51,7 +51,6 @@ When needed, the minimized mode extends to a multi-line element.
 ## Manual entry
 
 {{< admonition type="note" >}}
-
 The Business Variable panel supports this feature starting from version 3.0.0.
 {{< /admonition >}}
 
@@ -99,7 +98,6 @@ To avoid this behavior, for the `Country dropdown` panel set `Select dependent v
 ## Maximum visible values
 
 {{< admonition type="note" >}}
-
 The Business Variable panel supports this feature starting from version 3.0.0.
 {{< /admonition >}}
 

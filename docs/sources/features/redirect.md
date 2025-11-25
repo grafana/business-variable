@@ -15,7 +15,6 @@ weight: 500
 # Redirect Dashboards
 
 {{< admonition type="note" >}}
-
 Variable panel supports redirects since version 2.2.0.
 {{< /admonition >}}
 
@@ -31,6 +30,8 @@ When a user selects a device in the Business Variable panel, the corresponding d
 Find below how to make it work.
 
 <Shorts id="TtC2bh7a4fE" title="Business Variable panel 2.2.0 for Grafana." />
+
+{{< youtube id="TtC2bh7a4fE" >}}
 
 ## Map dashboard variables
 
