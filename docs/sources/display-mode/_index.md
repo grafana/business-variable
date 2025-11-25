@@ -14,13 +14,13 @@ weight: 30
 
 # Display mode
 
-The Business Variable panel enhances dashboard variables by making them more user-friendly and allowing to place the panel anywhere on the dashboard.
+The Business Variable panel enhances dashboard variables by making them more user-friendly. You can place the panel anywhere on the dashboard.
 
 {{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/flex-pos.mp4" >}}
 
-The Business Variable panel configuration starts with the **Display mode** parameter. With that, you determine the style and, consequently, other available parameters for configuration.
+When you configure the Business Variable panel, start with the **Display mode** parameter. This parameter determines the style and available configuration options.
 
-As of now, there are four available options for the **Display Mode** parameter.
+Four options are available for the **Display mode** parameter.
 
 {{< admonition type="note" >}}
 The Business Variable panel supports the **Slider** display mode starting from version 3.0.0.
@@ -28,7 +28,7 @@ The Business Variable panel supports the **Slider** display mode starting from v
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/slider-mode.png" max-width="450px" class="border" alt="Four available options for the Display Mode parameter." >}}
 
-Follow the links below to learn more about each display mode.
+Follow the links below to learn about each display mode.
 
 | Section                 | Description                                                    |
 | ----------------------- | -------------------------------------------------------------- |

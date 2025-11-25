@@ -14,25 +14,25 @@ weight: 200
 
 # Minimize
 
-Select **Minimize** if you plan to have the native select look and need to place it anywhere on your dashboard.
+Select **Minimize** to create a native select element that you can place anywhere on your dashboard.
 
-The minimized mode works for Query and Custom variables.
+The minimize mode works for Query and Custom variables.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/query-custom.png" class="border" alt="The minimized mode works for Query and Custom variables." >}}
 
-In the minimized mode the variable panel allows updating (selecting another value) dashboard variables without occupying valuable top space since you can place it anywhere on the dashboard.
+In the minimize mode, the variable panel lets you update dashboard variables without using the top space. You can place the panel anywhere on the dashboard.
 
-In the example below, there are four Business Variable panels. They are located on the top right and provide a selection of Regions, Countries, States, and Markets.
+In the following example, four Business Variable panels appear in the top right. They provide selection for Regions, Countries, States, and Markets.
 
 {{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/select.mp4" >}}
 
 ## Single or multi-value variables
 
-Following the variable options, users are allowed to select a single or multi-value variable.
+Based on the variable options, you can select a single or multi-value variable.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/multi.png" class="border" alt="Single and multi-value variables in the minimized mode." >}}
 
-When needed, the minimized mode extends to a multi-line element.
+When needed, the minimize mode expands to a multi-line element.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/minimize.png" class="border" alt="Multi-line select element." >}}
 
@@ -42,27 +42,27 @@ When needed, the minimized mode extends to a multi-line element.
 The Business Variable panel supports this feature starting from version 3.0.0.
 {{< /admonition >}}
 
-In the **Minimize** display mode, you can allow users to enter the values manually.
+In the **Minimize** display mode, you can allow users to enter values manually.
 
 {{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/manual.mp4" >}}
 
-Set the **Values**->**Allow custom values** parameter to **Enabled** to allow manual entry. By default, it is set to **Disabled**
+To allow manual entry, set the **Values > Allow custom values** parameter to **Enabled**. The default setting is **Disabled**.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/manual.png" class="border" alt="The Allow Custom values parameter is available for the Minimize display mode." >}}
 
 ### Dependent variables
 
-Set the Allow custom values parameter to Enabled may call unexpected behavior between depending variables.
+Enabling the Allow custom values parameter can cause unexpected behavior between dependent variables.
 
-Two panels show variables that are dependent on each other. For the `State dropdown` panel, available options are depending on the selected `Country` variable.
+Two panels display variables that depend on each other. The `State dropdown` panel options depend on the selected `Country` variable.
 
-If we enable the **Allow custom values** option for the `State dropdown` panel, it causes options to appear that we do not expect to see for certain variables.
+If you enable the **Allow custom values** option for the `State dropdown` panel, unexpected options might appear for certain variables.
 
 {{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/unexpected-behavior.mp4" >}}
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/dep-panels.png" class="border" alt="Two panels with dependent variables." >}}
 
-To avoid this behavior, for the `Country dropdown` panel set `Select dependent variable to reset` option to `state`.
+To avoid this behavior, set the `Country dropdown` panel's **Select dependent variable to reset** option to `state`.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/select-dep-variable-to-reset.png" class="border" alt="Select dependent variable to reset." >}}
 
@@ -72,12 +72,12 @@ To avoid this behavior, for the `Country dropdown` panel set `Select dependent v
 The Business Variable panel supports this feature starting from version 3.0.0.
 {{< /admonition >}}
 
-**Values**->**Maximum visible values** is available when the **Business Variable**->**Display mode** is set to **Minimize**.
+**Values > Maximum visible values** is available when **Business Variable > Display mode** is set to **Minimize**.
 
-This parameter is helpful when your users select several options in the variable panel, as shown below (print screen on the left). In that event, the variable panel might take up too much screen space and distort the dashboard layout.
+This parameter helps when users select several options in the variable panel. In the following example (left screenshot), the variable panel takes up too much screen space and distorts the dashboard layout.
 
-You have the flexibility to set the maximum number of visible on-screen options to avoid that.
+You can set the maximum number of visible on-screen options to prevent this issue.
 
-For instance, in the picture below (print-screen on the right), the **Maximum visible values** parameter is set to 3, and the Business Variable panel looks more like what you expect from the **Minimize** mode - one line. Three options are left: Singapore, Stockholm, and Tokyo. The remaining are collected into (+21).
+In the right screenshot, the **Maximum visible values** parameter is set to 3. The Business Variable panel displays as one line—closer to what you expect from the **Minimize** mode. Three options remain visible: Singapore, Stockholm, and Tokyo. The remaining options are collected into (+21).
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/max-visible-value.png" class="border" alt="Parameter: Maximum visible values." >}}

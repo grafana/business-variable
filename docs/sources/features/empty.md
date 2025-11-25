@@ -20,10 +20,10 @@ The empty value option was introduced in version 2.0.0.
 
 This feature works for the **Minimize** and **Button** display modes.
 
-Before this feature was introduced there was no way to unselect all values. A user always had to have something selected after they made the first selection.
+Before this feature was introduced, you couldn't unselect all values. A user always had to have a value selected after making the first selection.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/multi-value.png" max-width="400px" class="border" alt="Multi-value setting for dashboard variables." >}}
 
-For this feature to work, you must enable the **Allow empty value** parameter in the **Values** category.
+To enable this feature, enable the **Allow empty value** parameter in the **Values** category.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/empty-all.png" class="border" alt="When Allow empty value is enabled, a user can unselect all variable values." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/empty-all.png" class="border" alt="When you enable Allow empty value, a user can unselect all variable values." >}}

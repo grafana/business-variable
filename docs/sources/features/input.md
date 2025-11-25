@@ -14,16 +14,16 @@ weight: 600
 
 # Input text box
 
-The input text box is supported in the **Table** and **Minimize** display modes.
+The Business Variable panel supports input text boxes in the **Table** and **Minimize** display modes.
 
-In the **Table** display mode, you can use the **Sticky position** option to make the Business Variable panel stay in sight when scrolling the dashboard.
+In the **Table** display mode, you can use the **Sticky position** option to keep the Business Variable panel in sight when scrolling the dashboard.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/input.png" class="border" alt="Input text box in the Business Variable panel." >}}
 
 ## Enter the key for the text box type
 
-Hitting the enter key after typing a text value in the Text box variable type triggers the dashboard refresh.
+Pressing the Enter key after typing a text value in the Text box variable type triggers a dashboard refresh.
 
-Before implementing this feature, a user had to use a mouse cursor to click outside the box for the variable to take effect.
+Before this feature was implemented, users had to click outside the box for the variable to take effect.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/enter.png" class="border" alt="You can use the enter key for the variable to take effect." >}}

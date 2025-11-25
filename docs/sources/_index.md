@@ -12,9 +12,9 @@ weight: 10
 
 # Business Variable
 
-The Business Variable panel builds on top of the regular dashboard variables. It allows you to have dashboard filters in a separate panel, which you can place anywhere on the dashboard.
+The Business Variable panel builds on top of regular dashboard variables. You can place dashboard filters in a separate panel anywhere on the dashboard.
 
-The Business Variable panel offers many layouts with robust options, including an advanced TreeView layout. With the latest updates, users can [switch between dashboards](/plugins/business-variable/redirect), which adds to the satisfying user experience.
+The Business Variable panel offers many layouts with robust options, including an advanced TreeView layout. With the latest updates, you can [switch between dashboards](/plugins/business-variable/redirect) for a better user experience.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ The Business Variable panel can be installed from the [Grafana Catalog](https://
 
 {{< youtube id="1qYzHfPXJF8" >}}
 
-For the latter, please use the following command.
+To install using the command line, run the following command:
 
 ```sh
 grafana cli plugins install volkovlabs-variable-panel
@@ -36,35 +36,35 @@ grafana cli plugins install volkovlabs-variable-panel
 
 ## Highlights
 
-- Allows working with dashboard variables in the **Table**, **Minimize**, **Button**, and **Slider** display modes.
-- The **Table** display mode can be configured into a TreeView.
-- Displays statuses based on thresholds from data sources.
-- Supports single and multi-value variables with the All option.
-- Allows filtering values by pattern and selected favorites.
-- Supports follow when scrolling (**Sticky position**).
-- Supports multiple TreeViews using groups/tabs.
-- Supports the input text (**Input box**) variables.
+- Work with dashboard variables in the **Table**, **Minimize**, **Button**, and **Slider** display modes.
+- Configure the **Table** display mode as a TreeView.
+- Display statuses based on thresholds from data sources.
+- Use single and multi-value variables with the All option.
+- Filter values by pattern and selected favorites.
+- Enable the panel to follow when scrolling (**Sticky position**).
+- Create multiple TreeViews using groups and tabs.
+- Use input text (**Input box**) variables.
 
 ## Tutorial
 
-This video reviews the latest features introduced in Business Variable 3.0.0.
+This video reviews the latest features in Business Variable 3.0.0.
 
-Daria demonstrates many new options for the **Minimize** mode, such as
+The video demonstrates many new options for the **Minimize** mode, such as:
 
-- allow empty value,
-- allow custom values,
-- maximum visible values.
+- Allow empty value,
+- Allow custom values,
+- Maximum visible values.
 
-For the **Table** mode, she explains how to display total and selected counts.
-Further, Daria introduces a **Slider** mode and touches upon the TreeView layout improvements and advanced features.
+For the **Table** mode, the video explains how to display total and selected counts.
+The video also introduces the **Slider** mode and covers TreeView layout improvements and advanced features.
 
 {{< youtube id="vcdcLDVQYek" >}}
 
-For the all plugin options overview, please refer the other video.
+For an overview of all plugin options, watch the following video.
 
 {{< youtube id="1ogv2jstrlI" >}}
 
-We have many other tutorials that you can find helpful. You can review all related to this plugin tutorials [here](/plugins/business-variable/tutorials).
+To learn more about this plugin, see [Tutorials](/plugins/business-variable/tutorials).
 
 ## Documentation
 

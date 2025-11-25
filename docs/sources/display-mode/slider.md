@@ -18,11 +18,11 @@ weight: 400
 The Business Variable panel supports the **Slider** display mode starting from version 3.0.0.
 {{< /admonition >}}
 
-The **Slider** is a fourth **Display mode** option.
+**Slider** is the fourth **Display mode** option.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/slider-mode.png" max-width="400px" class="border" alt="You can set the Slider Display mode in the Business Variable category." >}}
 
-When a dashboard variable contains a massive volume of values and only one selected value is logically acceptable, the **Slider** display mode is your way to go. For instance, a user needs to choose a year as shown below. A standard alternative (long dropdown list) is shown for comparison.
+Use the **Slider** display mode when a dashboard variable contains many values and only one selection is logically acceptable. For example, a user might need to choose a year, as shown in the following video. A standard drop-down list appears for comparison.
 
 {{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/slider.mp4" >}}
 
@@ -30,6 +30,6 @@ When a dashboard variable contains a massive volume of values and only one selec
 The **Slider** display mode works only for the Single-value dashboard variables.
 {{< /admonition >}}
 
-Text values also could be displayed using the **Slide** display mode.
+You can also display text values using the **Slider** display mode.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/slider-string.png" max-width="400px" class="border" alt="Text values are allowed in the Slider display mode." >}}

@@ -18,14 +18,14 @@ weight: 400
 Variable panel supports redirects since version 2.3.1.
 {{< /admonition >}}
 
-This feature is applicable when the Business Variable panel is configured in the **Minimize** and **Button** layouts. This mode could be turned on and off in the Business Variable panel options.
+This feature applies when you configure the Business Variable panel in the **Minimize** and **Button** layouts. You can turn this mode on or off in the Business Variable panel options.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/persist-on-off.png" max-width="400px" class="border" alt="Enable/Disable the Persistent mode." >}}
 
-When **Enabled**, the selected values are stored in the browser's local storage. It comes in handy when one Business Variable panel is controlled by the other Business Variable panel.
+When you enable persistent mode, selected values are stored in the browser's local storage. This is useful when one Business Variable panel controls another Business Variable panel.
 
-For instance, in the illustration below, I have two variable panels. One displays countries and the other one displays states within the selected country. I chose **USA** in the first panel and then **IL** on the other panel.
+For example, in the following illustration, two variable panels exist. One displays countries and the other displays states within the selected country. The user chose **USA** in the first panel and then **IL** in the second panel.
 
-Depending on the **Persistent** option value set for the **State** variable panel, the selected value is either _saved_ in the browser for future use or _not_.
+Depending on the **Persistent** option value set for the **State** variable panel, the selected value is either saved in the browser for future use or not.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/persistent.png" class="border" alt="Persistent option allows to keep the selected values in the browser's local cache." >}}
