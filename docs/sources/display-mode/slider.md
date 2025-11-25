@@ -8,6 +8,7 @@ labels:
   products:
     - enterprise
     - oss
+weight: 400
 ---
 import Image from "@theme/Image";
 

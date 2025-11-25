@@ -9,6 +9,7 @@ labels:
   products:
     - enterprise
     - oss
+weight: 40
 ---
 # Features
 
