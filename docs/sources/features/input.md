@@ -1,5 +1,5 @@
 ---
-title: Input Text Box
+title: Input text box
 description: Learn how to use the Input Text Box feature in Table and Minimize display
   modes with sticky positioning support.
 keywords:
@@ -12,7 +12,7 @@ labels:
 weight: 600
 ---
 
-# Input Text Box
+# Input text box
 
 The input text box is supported in the **Table** and **Minimize** display modes.
 
@@ -20,7 +20,7 @@ In the **Table** display mode, you can use the **Sticky position** option to mak
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/input.png" class="border" alt="Input text box in the Business Variable panel." >}}
 
-## Enter the key for the Text Box type
+## Enter the key for the text box type
 
 Hitting the enter key after typing a text value in the Text box variable type triggers the dashboard refresh.
 

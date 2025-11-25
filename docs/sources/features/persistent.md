@@ -1,5 +1,5 @@
 ---
-title: Persistent Mode
+title: Persistent mode
 description: Learn how to use Persistent Mode to store selected variable values in
   browser local storage across dashboard sessions.
 keywords:
@@ -12,7 +12,7 @@ labels:
 weight: 400
 ---
 
-# Persistent Mode
+# Persistent mode
 
 {{< admonition type="note" >}}
 Variable panel supports redirects since version 2.3.1.

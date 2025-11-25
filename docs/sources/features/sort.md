@@ -1,5 +1,5 @@
 ---
-title: Sort by Status
+title: Sort by status
 description: Learn how to enable sorting of variable panel values based on numeric
   data retrieved from your data source.
 keywords:
@@ -12,7 +12,7 @@ labels:
 weight: 100
 ---
 
-# Sort by Status
+# Sort by status
 
 You can allow users to sort the Business Variable panel values based on the data retrieved from the data source.
 

@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Release notes
 description: Learn about the latest features, enhancements, fixes, and breaking changes
   across all versions of the Business Variable panel.
 keywords:
@@ -13,7 +13,7 @@ labels:
 weight: 60
 ---
 
-# Release Notes
+# Release notes
 
 Follow the development of the Business Variable panel, including new features, enhancements, fixes, and breaking changes across all versions.
 

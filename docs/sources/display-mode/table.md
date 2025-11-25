@@ -62,7 +62,7 @@ To have tabs' names displayed you need to have at least two tabs added.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/add-tabs.png" class="border" alt="Add at least two groups/tabs to have their names displayed." >}}
 
-### TreeView Levels
+### TreeView levels
 
 To create a TreeView with levels, you need a dashboard variable for each level.
 
@@ -89,13 +89,13 @@ In the **Groups** category, when the **Allow multi-level selection** parameter i
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/group-selection.png" class="border" alt="Selection of a group automatically selects all elements in this group." >}}
 
-### TreeView Groups/Tabs
+### TreeView groups and tabs
 
 A TreeView in the illustration below has two groups/tabs. You can add a new group/tab by using the **New Group** parameter.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/tabs.png" class="border" alt="A TreeView group consists of levels." >}}
 
-### Collapse/Expand on initial load
+### Collapse and expand on initial load
 
 {{< admonition type="note" >}}
 The Business Variable supports the Collapse/Expand feature starting from version 3.4.0.
@@ -202,7 +202,7 @@ It is a small, but very nice feature. Once you start typing in the search text f
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/clean.png" max-width="500px" class="border" alt="Clean filter value button in the search field." >}}
 
-### Always Visible Search option
+### Always visible search option
 
 {{< admonition type="note" >}}
 The Business Variable panel supports this feature starting from version 2.2.0.
@@ -254,7 +254,7 @@ In the illustration below, you can see three different dashboards with an identi
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/tab-pres.png" class="border" alt="Selected tab preservation configuration." >}}
 
-## Custom image for the Grafana Thresholds
+## Custom image for the Grafana thresholds
 
 {{< admonition type="note" >}}
 The Business Variable supports the Custom image feature starting from version 3.4.0.
@@ -264,7 +264,7 @@ Grafana Thresholds functionality provides a better visual representation of data
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/img.png" class="border" alt="Specify image for a better visual thresholds representation." >}}
 
-## Advanced. Select dependent variable to reset
+## Advanced: Select dependent variable to reset
 
 {{< admonition type="note" >}}
 The Business Variable panel supports this feature starting from version 3.0.0.

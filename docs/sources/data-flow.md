@@ -1,5 +1,5 @@
 ---
-title: Data Flow
+title: Data flow
 description: Learn how the Business Variable panel uses dashboard variables as data
   sources and optionally connects to data sources for status indicators and TreeView
   relationships.
@@ -13,7 +13,7 @@ labels:
 weight: 20
 ---
 
-# Data Flow
+# Data flow
 
 To get a glimpse under the hood, please review the following comparison.
 

@@ -1,5 +1,5 @@
 ---
-title: Empty value in Multi-value
+title: Empty value in multi-value
 description: Learn how to allow users to unselect all values in multi-value variables
   using the Allow empty value option.
 keywords:
@@ -12,7 +12,7 @@ labels:
 weight: 300
 ---
 
-# Empty value in Multi-value
+# Empty value in multi-value
 
 {{< admonition type="note" >}}
 The empty value option was introduced in version 2.0.0.

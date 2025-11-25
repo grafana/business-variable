@@ -17,9 +17,9 @@ The Business Variable panel provides an extensive set of features.
 
 | Section                                          | Description                                       |
 | ------------------------------------------------ | ------------------------------------------------- |
-| [Sort by Status](../sort)                        | Sort by any field from the data source            |
+| [Sort by status](../sort)                        | Sort by any field from the data source            |
 | [Key-values format in variables](../key)         | Use the key-values format in variables            |
 | [Empty value in multi-value variables](../empty) | Empty value in multi-value variables              |
 | [Persistent mode](../persistent)                 | Allows to keep the selected values if unavailable |
 | [Redirect dashboards](../redirect)               | Open another dashboard from the Variable panel    |
-| [Input Text Box](../input)                       | Input Text Box                                    |
+| [Input text box](../input)                       | Input Text Box                                    |

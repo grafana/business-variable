@@ -1,5 +1,5 @@
 ---
-title: Redirect Dashboards
+title: Redirect dashboards
 description: Learn how to configure dashboard redirects that open corresponding dashboards
   based on variable value selections.
 keywords:
@@ -12,7 +12,7 @@ labels:
 weight: 500
 ---
 
-# Redirect Dashboards
+# Redirect dashboards
 
 {{< admonition type="note" >}}
 Variable panel supports redirects since version 2.2.0.

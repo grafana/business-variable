@@ -22,7 +22,7 @@ The Business Variable panel offers many layouts with robust options, including a
 - Business Variable panel 3.X requires **Grafana 10** or **Grafana 11**.
 - Variable panel 1.X, 2.X requires **Grafana 9.2** or **Grafana 10**.
 
-## Getting Started
+## Getting started
 
 The Business Variable panel can be installed from the [Grafana Catalog](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/) or utilizing the Grafana command line tool.
 
@@ -70,13 +70,12 @@ We have many other tutorials that you can find helpful. You can review all relat
 
 | Section                   | Description                              |
 | ------------------------- | ---------------------------------------- |
-| [Data Flow](data-flow/)   | Explains the Business Variable data flow |
-| [Display Modes](layout/)  | Explains different display modes         |
+| [Data flow](data-flow/)   | Explains the Business Variable data flow |
+| [Display mode](layout/)  | Explains different display modes         |
 | [Features](features)      | Explains panel features                  |
 | [Tutorials](tutorials)    | Easy to follow tutorials                 |
-| [Release Notes](release/) | The latest features and updates          |
+| [Release notes](release/) | The latest features and updates          |
 
 ## License
 
 Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-variable/blob/main/LICENSE).
-

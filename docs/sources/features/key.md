@@ -1,5 +1,5 @@
 ---
-title: Key-values format in Variables
+title: Key-values format in variables
 description: Learn how to use key-value pairs in variables to join data sets by IDs
   while displaying user-friendly names.
 keywords:
@@ -12,7 +12,7 @@ labels:
 weight: 200
 ---
 
-# Key-values format in Variables
+# Key-values format in variables
 
 A Grafana variable can be composed of a key and value to make it possible to join data sets by IDs(key) while displaying user-friendly names(value). The Business Variable panel supports this feature in all modes.
 
