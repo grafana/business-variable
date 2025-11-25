@@ -3,7 +3,7 @@ tags:
   - Business Variable
 image: /img/plugins/business-variable/sorting.png
 title: 'Sort by Status'
-description: 'Learn about Sort by Status in Grafana'
+description: 'Learn how to enable sorting of variable panel values based on numeric data retrieved from your data source.'
 labels:
   products:
     - enterprise

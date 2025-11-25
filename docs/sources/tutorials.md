@@ -3,7 +3,7 @@ tags:
   - Business Variable
 hide_table_of_contents: true
 title: 'Tutorials'
-description: 'Learn about Tutorials in Grafana'
+description: 'Learn how to use the Business Variable panel through step-by-step video tutorials showcasing features and common use cases.'
 labels:
   products:
     - enterprise

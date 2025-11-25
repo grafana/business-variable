@@ -4,7 +4,7 @@ tags:
 image: /img/plugins/business-variable/flow-var-panel.png
 hide_table_of_contents: true
 title: 'Display mode'
-description: 'Learn about Display mode in Grafana'
+description: 'Learn about the four available display modes for the Business Variable panel: Table, Minimize, Button, and Slider.'
 labels:
   products:
     - enterprise

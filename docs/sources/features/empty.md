@@ -3,7 +3,7 @@ tags:
   - Business Variable
 image: /img/plugins/business-variable/empty-all.png
 title: 'Empty value in Multi-value'
-description: 'Learn about Empty value in Multi-value in Grafana'
+description: 'Learn how to allow users to unselect all values in multi-value variables using the Allow empty value option.'
 labels:
   products:
     - enterprise

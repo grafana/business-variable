@@ -3,7 +3,7 @@ tags:
   - Business Variable
 image: /img/plugins/business-variable/input.png
 title: 'Input Text Box'
-description: 'Learn about Input Text Box in Grafana'
+description: 'Learn how to use the Input Text Box feature in Table and Minimize display modes with sticky positioning support.'
 labels:
   products:
     - enterprise

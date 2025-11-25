@@ -3,7 +3,7 @@ tags:
   - Business Variable
 image: /img/blog/2023-11-30-variable-panel-2.2.0/vars.png
 title: 'Redirect Dashboards'
-description: 'Learn about Redirect Dashboards in Grafana'
+description: 'Learn how to configure dashboard redirects that open corresponding dashboards based on variable value selections.'
 labels:
   products:
     - enterprise

@@ -4,7 +4,7 @@ tags:
 image: /img/plugins/business-variable/flow-var-panel.png
 hide_table_of_contents: true
 title: 'Data Flow'
-description: 'Learn about Data Flow in Grafana'
+description: 'Learn how the Business Variable panel uses dashboard variables as data sources and optionally connects to data sources for status indicators and TreeView relationships.'
 labels:
   products:
     - enterprise

@@ -4,7 +4,7 @@ tags:
 image: /img/plugins/business-variable/dashboard.png
 hide_table_of_contents: true
 title: 'Features'
-description: 'Learn about Features in Grafana'
+description: 'Learn about the extensive features of the Business Variable panel including sorting, key-value formats, and dashboard redirects.'
 labels:
   products:
     - enterprise

@@ -3,7 +3,7 @@ tags:
   - Business Variable
 image: /img/plugins/business-variable/flow-var-panel.png
 title: 'Table'
-description: 'Learn about Table in Grafana'
+description: 'Learn how to use the Table display mode to create single variable lists, multi-level TreeViews, and hierarchical structures with status indicators.'
 labels:
   products:
     - enterprise

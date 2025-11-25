@@ -3,7 +3,7 @@ tags:
   - Business Variable
 image: /img/plugins/business-variable/flow-var-panel.png
 title: 'Slider'
-description: 'Learn about Slider in Grafana'
+description: 'Learn how to use the Slider display mode for single-value selection from long lists of numeric or text values.'
 labels:
   products:
     - enterprise
