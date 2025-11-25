@@ -10,8 +10,6 @@ labels:
     - oss
 weight: 400
 ---
-import Image from "@theme/Image";
-import Shorts from "@theme/Shorts";
 
 # Persistent Mode
 

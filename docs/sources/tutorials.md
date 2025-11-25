@@ -10,13 +10,10 @@ labels:
     - oss
 weight: 50
 ---
-import BlogPost from "@theme/BlogPost";
-import Youtube from "@theme/Youtube";
-import Tutorials from "../../_tutorials.mdx";
 
 # Tutorials
 
-<Tutorials />
+This page contains clear, step-by-step video tutorials that showcase new features and tackle the most common challenges users face. The goal is to make your experience with Business Suite as seamless and productive as possible.
 
 ## New features and updates in Business Variable 3.0.0
 

@@ -10,7 +10,6 @@ labels:
     - oss
 weight: 100
 ---
-import Image from "@theme/Image";
 
 # Sort by Status
 

@@ -10,7 +10,6 @@ labels:
     - oss
 weight: 300
 ---
-import Image from "@theme/Image";
 
 # Empty value in Multi-value
 

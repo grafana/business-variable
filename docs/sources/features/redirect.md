@@ -10,8 +10,6 @@ labels:
     - oss
 weight: 500
 ---
-import Image from "@theme/Image";
-import Shorts from "@theme/Shorts";
 
 # Redirect Dashboards
 
