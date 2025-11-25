@@ -30,11 +30,7 @@ As of now, there are four available options for the **Display Mode** parameter.
 The Business Variable panel supports the **Slider** display mode starting from version 3.0.0.
 {{< /admonition >}}
 
-<Image
-  title="Four available options for the Display Mode parameter."
-  src="/img/blog/2024-06-01-variable-panel-3.0.0/slider-mode.png"
-  width="70%"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/slider-mode.png" class="border" alt="Four available options for the Display Mode parameter." >}}
 
 Follow the links below to learn more about each display mode.
 

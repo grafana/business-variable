@@ -16,7 +16,4 @@ weight: 300
 
 In the **Button** display mode, you get horizontally positioned variable values looking like buttons. Optionally, you can set up color-coding rules in the **Thresholds** category on the right.
 
-<Image
-  title="The Button mode converts vertical listing into horizontal elements. Color coding follows the threshold rules."
-  src="/img/plugins/business-variable/button-mode.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/button-mode.png" class="border" alt="The Button mode converts vertical listing into horizontal elements. Color coding follows the threshold rules." >}}

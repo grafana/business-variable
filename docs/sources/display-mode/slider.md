@@ -20,11 +20,7 @@ The Business Variable panel supports the **Slider** display mode starting from v
 
 The **Slider** is a fourth **Display mode** option.
 
-<Image
-  title="You can set the Slider Display mode in the Business Variable category."
-  src="/img/blog/2024-06-01-variable-panel-3.0.0/slider-mode.png"
-  width="70%"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/slider-mode.png" class="border" alt="You can set the Slider Display mode in the Business Variable category." >}}
 
 When a dashboard variable contains a massive volume of values and only one selected value is logically acceptable, the **Slider** display mode is your way to go. For instance, a user needs to choose a year as shown below. A standard alternative (long dropdown list) is shown for comparison.
 
@@ -39,7 +35,4 @@ The **Slider** display mode works only for the Single-value dashboard variables.
 
 Text values also could be displayed using the **Slide** display mode.
 
-<Image
-  title="Text values are allowed in the Slider display mode."
-  src="/img/blog/2024-06-01-variable-panel-3.0.0/slider-string.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/slider-string.png" class="border" alt="Text values are allowed in the Slider display mode." >}}

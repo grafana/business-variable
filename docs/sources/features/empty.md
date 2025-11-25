@@ -22,14 +22,8 @@ This feature works for the **Minimize** and **Button** display modes.
 
 Before this feature was introduced there was no way to unselect all values. A user always had to have something selected after they made the first selection.
 
-<Image
-  title="Multi-value setting for dashboard variables."
-  src="/img/blog/2023-10-19-variable-panel-2.0.0/multi-value.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/multi-value.png" class="border" alt="Multi-value setting for dashboard variables." >}}
 
 For this feature to work, you must enable the **Allow empty value** parameter in the **Values** category.
 
-<Image
-  title="When Allow empty value is enabled, a user can unselect all variable values."
-  src="/img/plugins/business-variable/empty-all.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/empty-all.png" class="border" alt="When Allow empty value is enabled, a user can unselect all variable values." >}}
