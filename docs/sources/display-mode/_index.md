@@ -16,11 +16,7 @@ weight: 30
 
 The Business Variable panel enhances dashboard variables by making them more user-friendly and allowing to place the panel anywhere on the dashboard.
 
-<Image
-  title="The Business Variable panel can be placed anywhere on the dashboard."
-  src="/img/plugins/business-variable/flex-pos.gif"
-  width="40%"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/flex-pos.mp4" >}}
 
 The Business Variable panel configuration starts with the **Display mode** parameter. With that, you determine the style and, consequently, other available parameters for configuration.
 

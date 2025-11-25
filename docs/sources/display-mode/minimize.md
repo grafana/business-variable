@@ -24,10 +24,7 @@ In the minimized mode the variable panel allows updating (selecting another valu
 
 In the example below, there are four Business Variable panels. They are located on the top right and provide a selection of Regions, Countries, States, and Markets.
 
-<Image
-  title="Example of the elegant space screen space saving."
-  src="/img/blog/2023-07-26-variable-panel-1.6.0/select.gif"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/select.mp4" >}}
 
 ## Single or multi-value variables
 
@@ -47,11 +44,7 @@ The Business Variable panel supports this feature starting from version 3.0.0.
 
 In the **Minimize** display mode, you can allow users to enter the values manually.
 
-<Image
-  title="Manual data entry is possible when the new parameter is enabled."
-  src="/img/blog/2024-06-01-variable-panel-3.0.0/manual.gif"
-  width="60%"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/manual.mp4" >}}
 
 Set the **Values**->**Allow custom values** parameter to **Enabled** to allow manual entry. By default, it is set to **Disabled**
 
@@ -65,10 +58,7 @@ Two panels show variables that are dependent on each other. For the `State dropd
 
 If we enable the **Allow custom values** option for the `State dropdown` panel, it causes options to appear that we do not expect to see for certain variables.
 
-<Image
-  title="State dropdown has move options than allowed by the Country variable."
-  src="/img/plugins/business-variable/unexpected-behavior.gif"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/unexpected-behavior.mp4" >}}
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/dep-panels.png" class="border" alt="Two panels with dependent variables." >}}
 

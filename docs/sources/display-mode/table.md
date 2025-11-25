@@ -128,12 +128,7 @@ An additional option to display the variable name in front of the value can be e
 
 The Business Variable panel allows selecting values as favorites. The favorite icon in the header allows you to filter all favorites for quick navigation and selection.
 
-<Image
-  title="Selected values are unique for each user and stored in the Web browser's storage."
-  src="/img/plugins/business-variable/favorites.png"
-  lazy={false}
-  width="80%"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/favorites.png" class="border" alt="Selected values are unique for each user and stored in the Web browser's storage." >}}
 
 {{< admonition type="note" >}}
 Prior to the version 3.4.0 favorites could only be stored in a web browser.
@@ -193,11 +188,7 @@ You can enable the **Sticky** option to ensure the Business Variable panel is al
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/sticky.png" class="border" alt="The Sticky option is available for the Table display mode." >}}
 
-<Image
-  title="With the Sticky option, the Business Variable panel is always in sight."
-  src="/img/plugins/business-variable/sticky.gif"
-  width="70%"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/sticky.mp4" >}}
 
 ## Search
 
@@ -343,19 +334,11 @@ The value '3' is common for all devices. The value '2' is shared by device 1 and
 
 If you set `type` to '3', then with switching devices in the `device` variable, you will always see '3' in the `type` variable. The `type` variable gets refreshed/updated (the underlying query is rerun), and following that Grafana will set it to '3' (to the previously selected value).
 
-<Image
-  title="In case of the overlapping values, Grafana sets the common value."
-  src="/img/blog/2024-06-01-variable-panel-3.0.0/reset-no.gif"
-  width="60%"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/reset-no.mp4" >}}
 
 If you set `type` to 1 (not overlapping value, the value '1' is unique to one device), then with every switch of the `device` variable, the `type` gets refreshed/updated (the underlying query is rerun) and the first retrieved value is displayed. Grafana can not set to the value selected previously since there is no such value for device 2, and for device 3.
 
-<Image
-  title="In case of no overlapping values, the first from the query result is displayed."
-  src="/img/blog/2024-06-01-variable-panel-3.0.0/reset-yes.gif"
-  width="60%"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/reset-yes.mp4" >}}
 
 The **Select dependent variable to reset** parameter ensures that overlapping values do not matter.
 

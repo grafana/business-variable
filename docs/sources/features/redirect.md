@@ -18,10 +18,7 @@ weight: 500
 Variable panel supports redirects since version 2.2.0.
 {{< /admonition >}}
 
-<Image
-  title="With the Business Variable panel you can switch between dashboards."
-  src="/img/plugins/business-variable/dashboard-redirect.gif"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/dashboard-redirect.mp4" >}}
 
 This feature allows opening the corresponding dashboard to a variable value. It is useful, for instance, if a variable panel displays a list of some devices where every device requires a specific dashboard.
 
