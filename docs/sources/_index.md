@@ -26,10 +26,7 @@ The Business Variable panel offers many layouts with robust options, including a
 
 The Business Variable panel can be installed from the [Grafana Catalog](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/) or utilizing the Grafana command line tool.
 
-<Youtube
-  id="1qYzHfPXJF8"
-  title="Install Business Suite plugins in Cloud, OSS, Enterprise. Getting started with the Business Suite."
-/>
+{{< youtube id="1qYzHfPXJF8" >}}
 
 For the latter, please use the following command.
 
@@ -61,17 +58,11 @@ Daria demonstrates many new options for the **Minimize** mode, such as
 For the **Table** mode, she explains how to display total and selected counts.
 Further, Daria introduces a **Slider** mode and touches upon the TreeView layout improvements and advanced features.
 
-<Youtube
-  id="vcdcLDVQYek"
-  title="New features and updates in Business Variable 3.0.0."
-/>
+{{< youtube id="vcdcLDVQYek" >}}
 
 For the all plugin options overview, please refer the other video.
 
-<Youtube
-  id="1ogv2jstrlI"
-  title="Variable Panel for Grafana. New features and updates in 2.3.1."
-/>
+{{< youtube id="1ogv2jstrlI" >}}
 
 We have many other tutorials that you can find helpful. You can review all related to this plugin tutorials [here](/plugins/business-variable/tutorials).
 

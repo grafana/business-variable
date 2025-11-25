@@ -29,16 +29,13 @@ Daria demonstrates many new options for the **Minimize** mode, such as
 For the **Table** mode, she explains how to display total and selected counts.
 Further, Daria introduces a **Slider** mode and touches upon the TreeView layout improvements and advanced features.
 
-<Youtube
-  id="vcdcLDVQYek"
-  title="New features and updates in Business Variable 3.0.0."
-/>
+{{< youtube id="vcdcLDVQYek" >}}
 
 ## File Upload
 
 Below is one of our YouTube videos with a use-case review. It features three open source plugins that come together on one Grafana dashboard to provide a solution for a long-standing task - file upload using a Grafana dashboard and immediate display of the uploaded files.
 
-<Youtube id="V4Sza0uDQNs" title="File Upload using Grafana dashboard." />
+{{< youtube id="V4Sza0uDQNs" >}}
 
 ### Implementation details
 
@@ -52,16 +49,10 @@ This video demonstrates the most exciting features of the Business Variable pane
 
 Toward the end, Daria reviews one of the most requested features - dashboard redirection: how to set it up, so the users switch between dashboards without realizing it.
 
-<Youtube
-  id="1ogv2jstrlI"
-  title="Demonstrates the Business Variable panel functionality."
-/>
+{{< youtube id="1ogv2jstrlI" >}}
 
 ## Grafana dashboard variables on steroids
 
 This is our first video about the Business Variable panel. Daria introduces the panel concepts and walks you through all basic features using the examples of a single variable, multiple variable, and TreeView layout.
 
-<Youtube
-  id="mYYtMW9qiPA"
-  title="Grafana dashboard variables on steroids. Variable panel with Single, Multi, Tree View layouts."
-/>
+{{< youtube id="mYYtMW9qiPA" >}}
