@@ -21,7 +21,7 @@ For that set **Sort by Status** option to **Enabled** and specify:
 - **Field with variable values**. That field is used to map the data frame with the variable panel values.
 - **Field with status values**. It should be a numeric format, the values are used for sorting.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/sorting.png" class="border" alt="Sorting button configuration." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/sorting.png" class="border" alt="Sorting button configuration." >}}
 
 The sorting button alternates between three modes when a user clicks.
 
@@ -29,4 +29,4 @@ The sorting button alternates between three modes when a user clicks.
 - Descending.
 - Ascending.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/sorting-alt.png" class="border" alt="Sorting button has three alternating by click modes." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/sorting-alt.png" class="border" alt="Sorting button has three alternating by click modes." >}}

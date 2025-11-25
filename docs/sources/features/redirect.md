@@ -37,18 +37,18 @@ Create two dashboard variables:
 - One to retrieve all devices.
 - The other one to hold one `dashboard_id` at a time following the device from the first variable.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/vars.png" class="border" alt="The dashboardid variable depends on the device variable." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/vars.png" class="border" alt="The dashboardid variable depends on the device variable." >}}
 
 ## Dashboards
 
 Create device-specific dashboards with an identical variable panel on each dashboard.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/switch-dash.png" class="border" alt="Create device-specific dashboards with an identical variable panel." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/switch-dash.png" class="border" alt="Create device-specific dashboards with an identical variable panel." >}}
 
 ## Variable panel
 
 In the Business Variable panel options, specify a value for the **Dashboard**->**Select variable with dashboard UID**.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/var-conf.png" class="border" alt="Select variable with dashboard UID: parameter to specify a dashboard unique identifier." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/var-conf.png" class="border" alt="Select variable with dashboard UID: parameter to specify a dashboard unique identifier." >}}
 
 After the above-presented configuration, the Business Variable panel switches dashboards when a user selects a device. A sleek transition makes the user experience smooth and pleasant.

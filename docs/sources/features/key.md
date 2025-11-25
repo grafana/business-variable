@@ -26,4 +26,4 @@ Screen 2 is a dashboard view where an end-user sees only city names. After the s
 
 From there the `city` variable's value can be used in the queries for other panels, screen 3.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/key-value.png" class="border" alt="Example of the key-value variable format in the Business Variable panel." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/key-value.png" class="border" alt="Example of the key-value variable format in the Business Variable panel." >}}

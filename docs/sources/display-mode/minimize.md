@@ -18,7 +18,7 @@ Select **Minimize** if you plan to have the native select look and need to place
 
 The minimized mode works for Query and Custom variables.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/query-custom.png" class="border" alt="The minimized mode works for Query and Custom variables." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/query-custom.png" class="border" alt="The minimized mode works for Query and Custom variables." >}}
 
 In the minimized mode the variable panel allows updating (selecting another value) dashboard variables without occupying valuable top space since you can place it anywhere on the dashboard.
 
@@ -30,11 +30,11 @@ In the example below, there are four Business Variable panels. They are located 
 
 Following the variable options, users are allowed to select a single or multi-value variable.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/multi.png" class="border" alt="Single and multi-value variables in the minimized mode." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/multi.png" class="border" alt="Single and multi-value variables in the minimized mode." >}}
 
 When needed, the minimized mode extends to a multi-line element.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/minimize.png" class="border" alt="Multi-line select element." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/minimize.png" class="border" alt="Multi-line select element." >}}
 
 ## Manual entry
 
@@ -48,7 +48,7 @@ In the **Minimize** display mode, you can allow users to enter the values manual
 
 Set the **Values**->**Allow custom values** parameter to **Enabled** to allow manual entry. By default, it is set to **Disabled**
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/manual.png" class="border" alt="The Allow Custom values parameter is available for the Minimize display mode." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/manual.png" class="border" alt="The Allow Custom values parameter is available for the Minimize display mode." >}}
 
 ### Dependent variables
 
@@ -60,11 +60,11 @@ If we enable the **Allow custom values** option for the `State dropdown` panel, 
 
 {{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/unexpected-behavior.mp4" >}}
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/dep-panels.png" class="border" alt="Two panels with dependent variables." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/dep-panels.png" class="border" alt="Two panels with dependent variables." >}}
 
 To avoid this behavior, for the `Country dropdown` panel set `Select dependent variable to reset` option to `state`.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/select-dep-variable-to-reset.png" class="border" alt="Select dependent variable to reset." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/select-dep-variable-to-reset.png" class="border" alt="Select dependent variable to reset." >}}
 
 ## Maximum visible values
 
@@ -80,4 +80,4 @@ You have the flexibility to set the maximum number of visible on-screen options 
 
 For instance, in the picture below (print-screen on the right), the **Maximum visible values** parameter is set to 3, and the Business Variable panel looks more like what you expect from the **Minimize** mode - one line. Three options are left: Singapore, Stockholm, and Tokyo. The remaining are collected into (+21).
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/max-visible-value.png" class="border" alt="Parameter: Maximum visible values." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/max-visible-value.png" class="border" alt="Parameter: Maximum visible values." >}}
