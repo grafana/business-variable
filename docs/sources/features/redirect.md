@@ -14,11 +14,10 @@ weight: 500
 
 # Redirect Dashboards
 
-:::info Version
+{{< admonition type="note" >}}
 
 Variable panel supports redirects since version 2.2.0.
-
-:::
+{{< /admonition >}}
 
 <Image
   title="With the Business Variable panel you can switch between dashboards."

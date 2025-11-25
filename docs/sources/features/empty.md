@@ -14,9 +14,9 @@ weight: 300
 
 # Empty value in Multi-value
 
-:::info Version
+{{< admonition type="note" >}}
 The empty value option was introduced in version 2.0.0.
-:::
+{{< /admonition >}}
 
 This feature works for the **Minimize** and **Button** display modes.
 

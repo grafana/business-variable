@@ -14,11 +14,10 @@ weight: 400
 
 # Persistent Mode
 
-:::info Version
+{{< admonition type="note" >}}
 
 Variable panel supports redirects since version 2.3.1.
-
-:::
+{{< /admonition >}}
 
 This feature is applicable when the Business Variable panel is configured in the **Minimize** and **Button** layouts. This mode could be turned on and off in the Business Variable panel options.
 

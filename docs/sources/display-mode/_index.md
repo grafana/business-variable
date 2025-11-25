@@ -26,11 +26,10 @@ The Business Variable panel configuration starts with the **Display mode** param
 
 As of now, there are four available options for the **Display Mode** parameter.
 
-:::info Version
+{{< admonition type="note" >}}
 
 The Business Variable panel supports the **Slider** display mode starting from version 3.0.0.
-
-:::
+{{< /admonition >}}
 
 <Image
   title="Four available options for the Display Mode parameter."

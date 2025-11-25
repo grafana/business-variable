@@ -142,9 +142,9 @@ A TreeView in the illustration below has two groups/tabs. You can add a new grou
 
 ### Collapse/Expand on initial load
 
-:::info Version
+{{< admonition type="note" >}}
 The Business Variable supports the Collapse/Expand feature starting from version 3.4.0.
-:::
+{{< /admonition >}}
 
 It is a self-explanatory option. You can regulate your TreeView's appearance after the dashboard is open.
 
@@ -155,9 +155,9 @@ It is a self-explanatory option. You can regulate your TreeView's appearance aft
 
 ### Tabs order
 
-:::info Version
+{{< admonition type="note" >}}
 The Business Variable supports the Tabs order feature starting from version 3.4.0.
-:::
+{{< /admonition >}}
 
 In case of multiple tabs, you can specify their order in the **Tab order** parameter:
 
@@ -189,10 +189,10 @@ The Business Variable panel allows selecting values as favorites. The favorite i
   width="80%"
 />
 
-:::info Version
+{{< admonition type="note" >}}
 Prior to the version 3.4.0 favorites could only be stored in a web browser.
 Starting from the version 3.4.0, there is a second option - data source.
-:::
+{{< /admonition >}}
 
 ### Store favorites in a data source
 
@@ -264,11 +264,10 @@ You can enable the **Sticky** option to ensure the Business Variable panel is al
 
 ### Clean filter value button
 
-:::info Version
+{{< admonition type="note" >}}
 
 The Business Variable panel supports this feature starting from version 2.2.0.
-
-:::
+{{< /admonition >}}
 
 It is a small, but very nice feature. Once you start typing in the search text field, you can remove all entered symbols by using an X button appearing at the far-right corner of the search text.
 
@@ -280,11 +279,10 @@ It is a small, but very nice feature. Once you start typing in the search text f
 
 ### Always Visible Search option
 
-:::info Version
+{{< admonition type="note" >}}
 
 The Business Variable panel supports this feature starting from version 2.2.0.
-
-:::
+{{< /admonition >}}
 
 The ability to hide a search text area can be taken away from users by using the **Always Visible search** option.
 
@@ -299,11 +297,10 @@ When it is **Enabled**, the funnel icon is hidden and users are not capable of h
 
 ## Total and selected values count
 
-:::info Version
+{{< admonition type="note" >}}
 
 The Business Variable panel supports this feature starting from version 3.0.0.
-
-:::
+{{< /admonition >}}
 
 In the **Table** display mode, you can now choose to **Display total and selected values count for multi-select variables**. The **Header** must be in the **Display** mode to see the new parameter.
 
@@ -316,11 +313,10 @@ This parameter is the enable/disable type. The total count appears next to the h
 
 ## Tab auto-grouping
 
-:::info Version
+{{< admonition type="note" >}}
 
 The Business Variable panel supports this feature starting from version 3.0.0.
-
-:::
+{{< /admonition >}}
 
 The ability to auto group tab adds even more sophistication to the Business Variable panel. When too many tabs are located side by side, the panel collects the overflowing tabs and shows the three vertical dots instead. Upon clicking on the dots, a user sees the rest of the tabs in a drop-down for selection.
 
@@ -333,11 +329,10 @@ The Business Variable panel shifts the selected tab on the very left among all o
 
 ## Selected tab preservation
 
-:::info Version
+{{< admonition type="note" >}}
 
 The Business Variable panel supports this feature starting from version 3.0.0.
-
-:::
+{{< /admonition >}}
 
 You might have the cloned Business Variable panel across many dashboards. With that, a user can [switch to a different dashboard](/blog/variable-panel-2.2.0-20231130/#dashboard-redirect-option) without realizing it. To enhance the user experience even further, you can now save the selected tab while redirecting a user and open a new dashboard with the tab that the user selected prior.
 
@@ -352,9 +347,9 @@ In the illustration below, you can see three different dashboards with an identi
 
 ## Custom image for the Grafana Thresholds
 
-:::info Version
+{{< admonition type="note" >}}
 The Business Variable supports the Custom image feature starting from version 3.4.0.
-:::
+{{< /admonition >}}
 
 Grafana Thresholds functionality provides a better visual representation of data on your dashboard. To enhance it, we added the possibility of specifying an SVG image instead of a simple colored circle!
 
@@ -365,11 +360,10 @@ Grafana Thresholds functionality provides a better visual representation of data
 
 ## Advanced. Select dependent variable to reset
 
-:::info Version
+{{< admonition type="note" >}}
 
 The Business Variable panel supports this feature starting from version 3.0.0.
-
-:::
+{{< /admonition >}}
 
 The **Select dependent variable to reset** option is for advanced Business Variable panel users. This option is created to jump over some default Grafana functionality.
 
