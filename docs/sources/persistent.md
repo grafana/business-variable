@@ -1,0 +1,40 @@
+---
+tags:
+  - Business Variable
+image: /img/blog/2023-12-14-variable-panel-2.3.1/persist-on-off.png
+title: 'Persistent Mode'
+description: 'Learn about Persistent Mode in Grafana'
+labels:
+  products:
+    - enterprise
+    - oss
+---
+import Image from "@theme/Image";
+import Shorts from "@theme/Shorts";
+
+# Persistent Mode
+
+:::info Version
+
+Variable panel supports redirects since version 2.3.1.
+
+:::
+
+This feature is applicable when the Business Variable panel is configured in the **Minimize** and **Button** layouts. This mode could be turned on and off in the Business Variable panel options.
+
+<Image
+  title="Enable/Disable the Persistent mode."
+  src="/img/blog/2023-12-14-variable-panel-2.3.1/persist-on-off.png"
+  width="50%"
+/>
+
+When **Enabled**, the selected values are stored in the browser's local storage. It comes in handy when one Business Variable panel is controlled by the other Business Variable panel.
+
+For instance, in the illustration below, I have two variable panels. One displays countries and the other one displays states within the selected country. I chose **USA** in the first panel and then **IL** on the other panel.
+
+Depending on the **Persistent** option value set for the **State** variable panel, the selected value is either <u>saved</u> in the browser for future use or <u>not</u>.
+
+<Image
+  title="Persistent option allows to keep the selected values in the browser's local cache."
+  src="/img/blog/2023-12-14-variable-panel-2.3.1/persistent.png"
+/>

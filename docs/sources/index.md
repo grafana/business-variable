@@ -1,0 +1,60 @@
+---
+tags:
+  - Business Variable
+image: /img/plugins/business-variable/dashboard.png
+hide_table_of_contents: true
+title: 'Business Variable'
+description: 'Learn about Business Variable in Grafana'
+labels:
+  products:
+    - enterprise
+    - oss
+---
+import Feedback from "../_feedback.mdx";
+import GettingStarted from "./_getting_started.mdx";
+import Image from "@theme/Image";
+import Tutorial from "./_tutorial.mdx";
+import Youtube from "@theme/Youtube";
+
+# Business Variable
+
+The Business Variable panel builds on top of the regular dashboard variables. It allows you to have dashboard filters in a separate panel, which you can place anywhere on the dashboard.
+
+The Business Variable panel offers many layouts with robust options, including an advanced TreeView layout. With the latest updates, users can [switch between dashboards](/plugins/business-variable/redirect), which adds to the satisfying user experience.
+
+## Requirements
+
+- Business Variable panel 4.X requires **Grafana 11** or **Grafana 12**.
+- Business Variable panel 3.X requires **Grafana 10** or **Grafana 11**.
+- Variable panel 1.X, 2.X requires **Grafana 9.2** or **Grafana 10**.
+
+<GettingStarted />
+
+## Highlights
+
+- Allows working with dashboard variables in the **Table**, **Minimize**, **Button**, and **Slider** display modes.
+- The **Table** display mode can be configured into a TreeView.
+- Displays statuses based on thresholds from data sources.
+- Supports single and multi-value variables with the All option.
+- Allows filtering values by pattern and selected favorites.
+- Supports follow when scrolling (**Sticky position**).
+- Supports multiple TreeViews using groups/tabs.
+- Supports the input text (**Input box**) variables.
+
+<Tutorial />
+
+## Documentation
+
+| Section                   | Description                              |
+| ------------------------- | ---------------------------------------- |
+| [Data Flow](data-flow/)   | Explains the Business Variable data flow |
+| [Display Modes](layout/)  | Explains different display modes         |
+| [Features](features)      | Explains panel features                  |
+| [Tutorials](tutorials)    | Easy to follow tutorials                 |
+| [Release Notes](release/) | The latest features and updates          |
+
+## License
+
+Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-variable/blob/main/LICENSE).
+
+<Feedback />

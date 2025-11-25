@@ -1,0 +1,40 @@
+---
+tags:
+  - Business Variable
+image: /img/plugins/business-variable/flow-var-panel.png
+hide_table_of_contents: true
+title: 'Data Flow'
+description: 'Learn about Data Flow in Grafana'
+labels:
+  products:
+    - enterprise
+    - oss
+---
+import Image from "@theme/Image";
+
+# Data Flow
+
+To get a glimpse under the hood, please review the following comparison.
+
+## A visualization panel versus the Business Variable panel
+
+Below are two schemas for comparison. The first one highlights the data flow for any regular Grafana visualization panel. Usually, a panel requires a data source that would fetch the data for further display by the panel.
+
+<Image
+  title="Data flow when working with a regular Grafana visualization panel."
+  src="/img/plugins/business-variable/flow-reg-panel.png"
+  width="70%"
+/>
+
+The Business Variable panel does not require a data source. It works with your dashboard variable which already is a set of values. So, in a way, the Business Variable panel uses your dashboard variable as a data source.
+
+However, optionally, the data source can be used for two purposes:
+
+- First, for a color status next to your variable, you need a numeric value to evaluate using thresholds.
+- Second, for the TreeView format, ensure to provide node relation via the connected data source.
+
+<Image
+  title="Data flow when working with the Business Variable panel."
+  src="/img/plugins/business-variable/flow-var-panel.png"
+  width="70%"
+/>
