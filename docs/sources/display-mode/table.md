@@ -20,7 +20,7 @@ The **Table** mode provides many variations, from the simplest basic single vari
 
 With the minimum configuration effort, your Business Variable panel might look like a simple list to select from. Whether or not multiple selections are allowed depends on the settings you choose in the variable configuration menu. In the example below, multiple selections and the **Include All** option are allowed.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/basic.png" class="border" alt="Basic Business Variable panel view." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/basic.png" max-width="150px" class="border" alt="Basic Business Variable panel view." >}}
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/basic-edit.png" class="border" alt="How to set up the Basic Business Variable panel view." >}}
 
@@ -31,7 +31,7 @@ To add a status circle, follow these additional steps:
 1. Connect the data source that retrieves two fields: a variable name and a numeric value.
 2. Configure the threshold by specifying the color to data ranges.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/basic-plus.png" class="border" alt="Basic Business Variable panel view plus circle statuses." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/basic-plus.png" max-width="150px" class="border" alt="Basic Business Variable panel view plus circle statuses." >}}
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-variable/basic-plus-edit.png" class="border" alt="How to set up the Basic Variable panel view plus circle statuses." >}}
 
@@ -51,7 +51,7 @@ This configuration is almost identical to the previous one. The differences are:
 
 The Multiple variables view can be displayed in a TreeView structure.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/treeview.png" class="border" alt="Tree View plus circle statuses." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/treeview.png" max-width="150px" class="border" alt="Tree View plus circle statuses." >}}
 
 The **TreeView** display mode consists of _groups_ which usually are referred to as _tabs_.
 Start with creating at least one **New Group** and assigning a dashboard variable to the **Select variable to display** parameter.
@@ -200,7 +200,7 @@ The Business Variable panel supports this feature starting from version 2.2.0.
 
 It is a small, but very nice feature. Once you start typing in the search text field, you can remove all entered symbols by using an X button appearing at the far-right corner of the search text.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/clean.png" class="border" alt="Clean filter value button in the search field." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/clean.png" max-width="500px" class="border" alt="Clean filter value button in the search field." >}}
 
 ### Always Visible Search option
 

@@ -20,7 +20,7 @@ Variable panel supports redirects since version 2.3.1.
 
 This feature is applicable when the Business Variable panel is configured in the **Minimize** and **Button** layouts. This mode could be turned on and off in the Business Variable panel options.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/persist-on-off.png" class="border" alt="Enable/Disable the Persistent mode." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/persist-on-off.png" max-width="400px" class="border" alt="Enable/Disable the Persistent mode." >}}
 
 When **Enabled**, the selected values are stored in the browser's local storage. It comes in handy when one Business Variable panel is controlled by the other Business Variable panel.
 

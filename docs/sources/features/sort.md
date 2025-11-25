@@ -29,4 +29,4 @@ The sorting button alternates between three modes when a user clicks.
 - Descending.
 - Ascending.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/sorting-alt.png" class="border" alt="Sorting button has three alternating by click modes." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/sorting-alt.png" max-width="400px" class="border" alt="Sorting button has three alternating by click modes." >}}
