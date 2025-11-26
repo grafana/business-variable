@@ -291,7 +291,7 @@ export const Table = <TTableData extends TableItem>({
                           className={styles.headerButton}
                           variant={header.column.getIsSorted() ? 'primary' : 'secondary'}
                           data-testid={TEST_IDS.table.buttonSort}
-                          title="Sort by status"
+                          aria-label="Sort by status"
                         />
                       )}
                       {header.column.getCanFilter() && (

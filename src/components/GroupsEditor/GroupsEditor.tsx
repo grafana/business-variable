@@ -203,6 +203,7 @@ export const GroupsEditor: React.FC<Props> = ({ context: { options, data }, onCh
                                 />
                               </InlineField>
                               <Button
+                                aria-label="Cancel rename"
                                 variant="secondary"
                                 fill="text"
                                 className={styles.actionButton}
@@ -234,6 +235,7 @@ export const GroupsEditor: React.FC<Props> = ({ context: { options, data }, onCh
                           <>
                             {editItem !== name && (
                               <Button
+                                aria-label="Edit group name"
                                 icon="edit"
                                 variant="secondary"
                                 fill="text"
@@ -250,6 +252,7 @@ export const GroupsEditor: React.FC<Props> = ({ context: { options, data }, onCh
                               />
                             )}
                             <Button
+                              aria-label="Remove group"
                               icon="trash-alt"
                               variant="secondary"
                               fill="text"
