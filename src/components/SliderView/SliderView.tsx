@@ -1,8 +1,7 @@
 import { css, cx } from '@emotion/css';
 import { EventBus, PanelProps } from '@grafana/data';
-import { Alert, InlineField, useStyles2 } from '@grafana/ui';
-import { Slider } from '@volkovlabs/components';
-import React from 'react';
+import { Alert, InlineField, Slider, useStyles2 } from '@grafana/ui';
+import React, { useId } from 'react';
 
 import { NO_VARIABLE_DEFAULT_MESSAGE, TEST_IDS } from '../../constants';
 import { useRuntimeVariables, useSlider } from '../../hooks';
@@ -53,6 +52,7 @@ export const SliderView: React.FC<Props> = ({
    * Styles and Theme
    */
   const styles = useStyles2(getStyles, slider.text, width);
+  const sliderId = useId();
 
   /**
    * No variable selected
@@ -102,12 +102,13 @@ export const SliderView: React.FC<Props> = ({
         label={showLabel && (variable.label || variable.name)}
         className={styles.field}
         grow
+        htmlFor={sliderId}
         labelWidth={labelWidth}
         data-testid={TEST_IDS.sliderView.field}
       >
         <div className={styles.slider}>
           <Slider
-            data-testid={TEST_IDS.sliderView.slider}
+            inputId={sliderId}
             included={true}
             max={slider.max}
             min={slider.min}
@@ -128,7 +129,7 @@ export const SliderView: React.FC<Props> = ({
             }}
             marks={slider.marks}
             value={slider.value}
-            inputWidth={0}
+            showInput={false}
           />
         </div>
       </InlineField>
