@@ -7,7 +7,7 @@
     "@grafana/scenes": "^5.42.0",
     "@grafana/ui": "^12.0.1",
     "@tanstack/react-table": "^8.21.3",
-    "@tanstack/react-virtual": "3.13.9",
+    "@tanstack/react-virtual": "3.13.12",
     "@volkovlabs/components": "^4.6.0",
     "react": "^18.3.1",
     "react-beautiful-dnd": "^13.1.1",
