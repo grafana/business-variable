@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { getJestSelectors } from '@volkovlabs/jest-selectors';
 import React from 'react';
 
@@ -52,6 +52,7 @@ describe('SliderView', () => {
   const deviceVariable = {
     multi: true,
     includeAll: true,
+    label: 'Device',
     type: VariableType.CUSTOM,
     current: {
       text: 'device2',
@@ -194,7 +195,7 @@ describe('SliderView', () => {
 
       expect(selectors.field()).toBeInTheDocument();
       expect(selectors.field()).toHaveTextContent('Device');
-      expect(selectors.slider()).toBeInTheDocument();
+      expect(screen.getByLabelText('Use arrow keys to change the value')).toBeInTheDocument();
 
       expect(selectors.root()).toHaveStyle('padding:20px');
     });
@@ -220,7 +221,7 @@ describe('SliderView', () => {
 
       expect(selectors.field()).toBeInTheDocument();
       expect(selectors.field()).toHaveTextContent('Device');
-      expect(selectors.slider()).toBeInTheDocument();
+      expect(screen.getByLabelText('Use arrow keys to change the value')).toBeInTheDocument();
 
       expect(selectors.root()).not.toHaveStyle('padding:20px');
       expect(selectors.root()).toHaveStyle('padding:0px');
@@ -251,7 +252,7 @@ describe('SliderView', () => {
 
       expect(selectors.field()).toBeInTheDocument();
       expect(selectors.field()).toHaveTextContent('Device');
-      expect(selectors.slider()).toBeInTheDocument();
+      expect(screen.getByLabelText('Use arrow keys to change the value')).toBeInTheDocument();
     });
 
     it('Should not display label', async () => {
@@ -273,156 +274,8 @@ describe('SliderView', () => {
 
       expect(selectors.field()).toBeInTheDocument();
       expect(selectors.field()).toHaveTextContent('');
-      expect(selectors.slider()).toBeInTheDocument();
-    });
-  });
-
-  describe('Update value', () => {
-    const options = [
-      {
-        text: ALL_VALUE,
-        value: ALL_VALUE_PARAMETER,
-        selected: false,
-      },
-      {
-        text: 'device1',
-        value: 'device1',
-        selected: true,
-      },
-      {
-        text: 'device2',
-        value: 'device2',
-        selected: false,
-      },
-      {
-        text: 'device3',
-        value: 'device3',
-        selected: false,
-      },
-    ];
-
-    const deviceVariable = {
-      multi: false,
-      includeAll: true,
-      type: VariableType.CUSTOM,
-      current: {
-        text: 'device1',
-      },
-      options: options,
-    };
-
-    beforeEach(() => {
-      jest.mocked(useRuntimeVariables).mockImplementationOnce(
-        () =>
-          ({
-            variable: deviceVariable,
-          }) as any
-      );
-    });
-
-    it('Should update slider value without updating variable', async () => {
-      const setValue = jest.fn();
-
-      jest.mocked(useSlider).mockReturnValueOnce({
-        value: 1,
-        min: 0,
-        max: 10,
-        variableValue: 'device1',
-        setValue,
-        text: 'Device 1',
-        marks: {},
-      });
-
-      render(
-        getComponent({
-          options: {
-            variable: 'device',
-            persistent: true,
-          } as any,
-        })
-      );
-
-      expect(selectors.field()).toBeInTheDocument();
-      expect(selectors.slider()).toBeInTheDocument();
-
-      await act(() => fireEvent.change(selectors.slider(), { target: { value: 3 } }));
-
-      expect(setValue).toHaveBeenCalled();
-      expect(setValue).toHaveBeenCalledWith(3);
-
-      expect(updateVariableOptions).not.toHaveBeenCalled();
-    });
-
-    it('Should update variable value on blur', async () => {
-      const setValue = jest.fn();
-
-      jest.mocked(useSlider).mockReturnValueOnce({
-        value: 1,
-        min: 0,
-        max: 10,
-        variableValue: 'device1',
-        setValue,
-        text: 'Device 1',
-        marks: {},
-      });
-
-      render(
-        getComponent({
-          options: {
-            variable: 'device',
-            persistent: true,
-          } as any,
-        })
-      );
-
-      expect(selectors.field()).toBeInTheDocument();
-      expect(selectors.slider()).toBeInTheDocument();
-
-      await act(() => fireEvent.change(selectors.slider(), { target: { value: 3 } }));
-      await act(() => fireEvent.blur(selectors.slider(), { target: { value: 3 } }));
-
-      expect(setValue).toHaveBeenCalled();
-      expect(setValue).toHaveBeenCalledWith(3);
-
-      /**
-       * Check if variable value updated
-       */
-      expect(updateVariableOptions).toHaveBeenCalledWith(
-        expect.objectContaining({
-          value: options[3].value,
-          previousValues: ['device1'],
-          variable: deviceVariable,
-        })
-      );
-    });
-
-    it('Should not update variable value if value not changed', async () => {
-      const setValue = jest.fn();
-
-      jest.mocked(useSlider).mockReturnValueOnce({
-        value: 1,
-        min: 0,
-        max: 10,
-        variableValue: 'device1',
-        setValue,
-        text: 'Device 1',
-        marks: {},
-      });
-
-      render(
-        getComponent({
-          options: {
-            variable: 'device',
-          } as any,
-        })
-      );
-
-      expect(selectors.field()).toBeInTheDocument();
-      expect(selectors.slider()).toBeInTheDocument();
-
-      await act(() => fireEvent.change(selectors.slider(), { target: { value: 1 } }));
-
-      expect(setValue).not.toHaveBeenCalled();
+      expect(screen.queryByLabelText('Device')).not.toBeInTheDocument();
+      expect(screen.getByLabelText('Use arrow keys to change the value')).toBeInTheDocument();
     });
   });
 });

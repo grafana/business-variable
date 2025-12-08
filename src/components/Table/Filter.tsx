@@ -111,6 +111,7 @@ export const Filter = <TTableData extends object>({ column, alwaysVisible }: Pro
       addonAfter={
         columnFilterValue ? (
           <Button
+            aria-label="Clear filter value"
             variant="secondary"
             icon="times"
             onClick={() => column.setFilterValue('')}
@@ -134,6 +135,7 @@ export const Filter = <TTableData extends object>({ column, alwaysVisible }: Pro
   return (
     <>
       <Button
+        aria-label="Toggle filter visibility"
         icon="filter"
         fill="text"
         onClick={onToggleVisibility}

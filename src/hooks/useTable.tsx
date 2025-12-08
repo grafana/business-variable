@@ -340,6 +340,7 @@ export const useTable = ({
               )}
               {table.getCanSomeRowsExpand() && (
                 <Button
+                  aria-label={table.getIsAllRowsExpanded() ? 'Collapse all' : 'Expand all'}
                   className={styles.expandButton}
                   onClick={table.getToggleAllRowsExpandedHandler()}
                   variant="secondary"
@@ -427,6 +428,7 @@ export const useTable = ({
 
               {row.getCanExpand() && (
                 <Button
+                  aria-label={row.getIsExpanded() ? 'Collapse row' : 'Expand row'}
                   className={styles.expandButton}
                   onClick={row.getToggleExpandedHandler()}
                   variant="secondary"
