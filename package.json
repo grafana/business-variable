@@ -18,7 +18,7 @@
   "description": "Enhances dashboards with movable, standalone filter panels for dynamic control.",
   "devDependencies": {
     "@grafana/eslint-config": "^8.1.0",
-    "@grafana/plugin-e2e": "^2.1.7",
+    "@grafana/plugin-e2e": "^2.2.3",
     "@grafana/tsconfig": "^2.0.0",
     "@playwright/test": "^1.54.1",
     "@stylistic/eslint-plugin": "^5.2.2",
