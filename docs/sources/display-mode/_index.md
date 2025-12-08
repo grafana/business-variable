@@ -1,0 +1,38 @@
+---
+title: Display mode
+description: Learn about the four available display modes for the Business Variable
+  panel, Table, Minimize, Button, and Slider.
+keywords:
+- business variable
+labels:
+  products:
+  - cloud
+  - enterprise
+  - oss
+weight: 30
+---
+
+# Display mode
+
+The Business Variable panel enhances dashboard variables by making them more user-friendly. You can place the panel anywhere on the dashboard.
+
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-variable/flex-pos.mp4" >}}
+
+When you configure the Business Variable panel, start with the **Display mode** parameter. This parameter determines the style and available configuration options.
+
+Four options are available for the **Display mode** parameter.
+
+{{< admonition type="note" >}}
+The Business Variable panel supports the **Slider** display mode starting from version 3.0.0.
+{{< /admonition >}}
+
+{{< figure src="/media/docs/grafana/panels-visualizations/business-variable/slider-mode.png" max-width="450px" class="border" alt="Four available options for the Display Mode parameter." >}}
+
+Follow the links below to learn about each display mode.
+
+| Section                 | Description                                                    |
+| ----------------------- | -------------------------------------------------------------- |
+| [Table](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/display-mode/table/)       | From simple lists to elaborated TreeViews                      |
+| [Minimize](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/display-mode/minimize) | Minimalistic design, similar to the native dashboard variables |
+| [Button](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/display-mode/button)     | The choice looks like a set of on/off buttons                  |
+| [Slider](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/display-mode/slider)     | Laconic slider for a simple one-value choice                   |

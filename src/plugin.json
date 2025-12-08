@@ -12,7 +12,12 @@
     },
     "description": "Enhances dashboards with movable, standalone filter panels for dynamic control.",
     "keywords": ["variable"],
-    "links": [],
+    "links": [
+      {
+        "name": "Documentation",
+        "url": "https://grafana.com/docs/plugins/volkovlabs-table-panel/"
+      }
+    ],
     "logos": {
       "large": "img/logo.svg",
       "small": "img/logo.svg"

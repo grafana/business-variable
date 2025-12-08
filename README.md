@@ -49,11 +49,11 @@ Dive into detailed guides to make the most of Business Variable:
 
 | Section                                                                   | Description                          |
 | ------------------------------------------------------------------------- | ------------------------------------ |
-| [Data Flow](https://volkovlabs.io/plugins/business-variable/data-flow/)   | Understand the panel's data flow     |
-| [Display Modes](https://volkovlabs.io/plugins/business-variable/layout/)  | Explore layout customization options |
-| [Features](https://volkovlabs.io/plugins/business-variable/features/)     | Learn about key capabilities         |
-| [Tutorials](https://volkovlabs.io/plugins/business-variable/tutorials/)   | Follow step-by-step guides           |
-| [Release Notes](https://volkovlabs.io/plugins/business-variable/release/) | Stay updated with recent changes     |
+| [Data flow](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/data-flow/)   | Understand the panel's data flow     |
+| [Display mode](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/display-mode/)  | Explore layout customization options |
+| [Features](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/features/)     | Learn about key capabilities         |
+| [Tutorials](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/tutorials/)   | Follow step-by-step guides           |
+| [Release notes](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/release/) | Stay updated with recent changes     |
 
 ## 📜 License
 
