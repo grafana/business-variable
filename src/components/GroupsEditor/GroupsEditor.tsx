@@ -1,7 +1,6 @@
 import { cx } from '@emotion/css';
 import { StandardEditorProps } from '@grafana/data';
-import { Button, Icon, InlineField, InlineFieldRow, InlineLabel, Input, useTheme2 } from '@grafana/ui';
-import { Collapse } from '@volkovlabs/components';
+import { Button, Collapse, Icon, InlineField, InlineFieldRow, InlineLabel, Input, Stack, useTheme2 } from '@grafana/ui';
 import React, { useCallback, useMemo, useState } from 'react';
 import {
   DragDropContext,
@@ -179,97 +178,103 @@ export const GroupsEditor: React.FC<Props> = ({ context: { options, data }, onCh
                     >
                       <Collapse
                         key={name}
-                        title={
-                          editItem === name ? (
-                            <div
-                              className={cx(styles.groupHeader, styles.groupHeaderForm)}
-                              onClick={(event) => event.stopPropagation()}
-                            >
-                              <InlineField className={styles.fieldName} invalid={!isUpdatedNameValid}>
-                                <Input
-                                  autoFocus={true}
-                                  value={editName}
-                                  onChange={(event) => setEditName(event.currentTarget.value)}
-                                  onKeyDown={(e) => {
-                                    if (e.key === 'Enter' && isUpdatedNameValid) {
-                                      onSaveName();
-                                    }
+                        label={
+                          <Stack
+                            flex={1}
+                            alignItems="center"
+                            justifyContent="space-between"
+                            data-testid={TEST_IDS.groupsEditor.item(name)}
+                          >
+                            {editItem === name ? (
+                              <div
+                                className={cx(styles.groupHeader, styles.groupHeaderForm)}
+                                onClick={(event) => event.stopPropagation()}
+                              >
+                                <InlineField className={styles.fieldName} invalid={!isUpdatedNameValid}>
+                                  <Input
+                                    autoFocus={true}
+                                    value={editName}
+                                    onChange={(event) => setEditName(event.currentTarget.value)}
+                                    onKeyDown={(e) => {
+                                      if (e.key === 'Enter' && isUpdatedNameValid) {
+                                        onSaveName();
+                                      }
 
-                                    if (e.key === 'Escape') {
-                                      onCancelEdit();
-                                    }
-                                  }}
-                                  data-testid={TEST_IDS.groupsEditor.fieldName}
+                                      if (e.key === 'Escape') {
+                                        onCancelEdit();
+                                      }
+                                    }}
+                                    data-testid={TEST_IDS.groupsEditor.fieldName}
+                                  />
+                                </InlineField>
+                                <Button
+                                  aria-label="Cancel rename"
+                                  variant="secondary"
+                                  fill="text"
+                                  className={styles.actionButton}
+                                  icon="times"
+                                  size="sm"
+                                  onClick={onCancelEdit}
+                                  data-testid={TEST_IDS.groupsEditor.buttonCancelRename}
                                 />
-                              </InlineField>
-                              <Button
-                                aria-label="Cancel rename"
-                                variant="secondary"
-                                fill="text"
-                                className={styles.actionButton}
-                                icon="times"
-                                size="sm"
-                                onClick={onCancelEdit}
-                                data-testid={TEST_IDS.groupsEditor.buttonCancelRename}
-                              />
-                              <Button
-                                variant="secondary"
-                                fill="text"
-                                className={styles.actionButton}
-                                icon="save"
-                                size="sm"
-                                onClick={onSaveName}
-                                disabled={!isUpdatedNameValid}
-                                tooltip={
-                                  isUpdatedNameValid ? '' : 'Name is empty or group with the same name already exists.'
-                                }
-                                data-testid={TEST_IDS.groupsEditor.buttonSaveRename}
-                              />
-                            </div>
-                          ) : (
-                            <div className={cx(styles.groupHeader, styles.groupHeaderText)}>{name}</div>
-                          )
-                        }
-                        headerTestId={TEST_IDS.groupsEditor.item(name)}
-                        actions={
-                          <>
-                            {editItem !== name && (
-                              <Button
-                                aria-label="Edit group name"
-                                icon="edit"
-                                variant="secondary"
-                                fill="text"
-                                size="sm"
-                                className={styles.actionButton}
-                                onClick={() => {
-                                  /**
-                                   * Start Edit
-                                   */
-                                  setEditName(name);
-                                  setEditItem(name);
-                                }}
-                                data-testid={TEST_IDS.groupsEditor.buttonStartRename}
-                              />
+                                <Button
+                                  variant="secondary"
+                                  fill="text"
+                                  className={styles.actionButton}
+                                  icon="save"
+                                  size="sm"
+                                  onClick={onSaveName}
+                                  disabled={!isUpdatedNameValid}
+                                  tooltip={
+                                    isUpdatedNameValid ? '' : 'Name is empty or group with the same name already exists.'
+                                  }
+                                  data-testid={TEST_IDS.groupsEditor.buttonSaveRename}
+                                />
+                              </div>
+                            ) : (
+                              <div className={cx(styles.groupHeader, styles.groupHeaderText)}>{name}</div>
                             )}
-                            <Button
-                              aria-label="Remove group"
-                              icon="trash-alt"
-                              variant="secondary"
-                              fill="text"
-                              size="sm"
-                              className={styles.actionButton}
-                              onClick={() => {
-                                /**
-                                 * Remove group
-                                 */
-                                onChangeItems(items.filter((item) => item.name !== name));
-                              }}
-                              data-testid={TEST_IDS.groupsEditor.buttonRemove}
-                            />
-                            <div className={styles.dragHandle} {...provided.dragHandleProps}>
-                              <Icon name="draggabledots" className={styles.dragIcon} />
-                            </div>
-                          </>
+                            <Stack alignItems="center" gap={0.5}>
+                              {editItem !== name && (
+                                <Button
+                                  aria-label="Edit group name"
+                                  icon="edit"
+                                  variant="secondary"
+                                  fill="text"
+                                  size="sm"
+                                  className={styles.actionButton}
+                                  onClick={(event) => {
+                                    event.stopPropagation();
+                                    /**
+                                     * Start Edit
+                                     */
+                                    setEditName(name);
+                                    setEditItem(name);
+                                  }}
+                                  data-testid={TEST_IDS.groupsEditor.buttonStartRename}
+                                />
+                              )}
+                              <Button
+                                aria-label="Remove group"
+                                icon="trash-alt"
+                                variant="secondary"
+                                fill="text"
+                                size="sm"
+                                className={styles.actionButton}
+                                onClick={(event) => {
+                                  event.stopPropagation();
+                                  /**
+                                   * Remove group
+                                   */
+                                  onChangeItems(items.filter((item) => item.name !== name));
+                                }}
+                                data-testid={TEST_IDS.groupsEditor.buttonRemove}
+                              />
+                              <div onClick={(event) => event.stopPropagation()} className={styles.dragHandle} {...provided.dragHandleProps}>
+                                <Icon name="draggabledots" className={styles.dragIcon} />
+                              </div>
+                            </Stack>
+                          </Stack>
                         }
                         isOpen={collapseState[name]}
                         onToggle={() => onToggleGroup(name)}
