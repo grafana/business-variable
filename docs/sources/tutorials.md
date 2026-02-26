@@ -37,10 +37,6 @@ The following video shows a use case that features three open source plugins. Th
 
 {{< youtube id="V4Sza0uDQNs" >}}
 
-### Implementation details
-
-For implementation details, see this [blog post](https://volkovlabs.io/blog/form-panel-file-upload-20240310/).
-
 ## Business Variable panel functionality
 
 This video demonstrates the most popular features of the Business Variable panel version 2.3.1. You can follow this tutorial to see everything yourself, including different layouts from `Slider`, `Button`, and simple `Table` to the advanced TreeView.
@@ -49,7 +45,7 @@ At the end, the video reviews dashboard redirection, a highly requested feature.
 
 {{< youtube id="1ogv2jstrlI" >}}
 
-## Grafana dashboard variables on steroids
+## Grafana dashboard variables augmented
 
 This is the first video about the Business Variable panel. The video introduces the panel concepts and walks you through all basic features using examples of a single variable, multiple variables, and TreeView layout.
 
