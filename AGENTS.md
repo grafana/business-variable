@@ -195,9 +195,33 @@ export const ButtonView: React.FC<Props> = ({ ... }) => {
 - No `console.log` or `console.error` — `no-console` is enforced as an error
 - No `debugger` statements
 
+### Markdown Lint
+
+Always run `npx markdownlint-cli <file>` when updating
+`.md` files and fix any issues before committing. This
+includes `AGENTS.md`, `README.md`, and `CHANGELOG.md`.
+
 ### Additional Rules
 
 - `no-console` and `no-debugger` are errors
-- `@typescript-eslint/no-deprecated` is a warning — avoid using deprecated APIs
+- `@typescript-eslint/no-deprecated` is a warning — avoid
+  using deprecated APIs
 - Unused variables are errors (except rest siblings)
-- Do not edit files in `.config/` — they are scaffolded by `@grafana/create-plugin`
+- Do not edit files in `.config/` — they are scaffolded
+  by `@grafana/create-plugin`
+
+## Changelog Policy
+
+**Always update `CHANGELOG.md` when making changes.** Every commit that
+modifies code, documentation, dependencies, or configuration must have a
+corresponding entry in the changelog under the current unreleased version
+section. Add entries as part of the same commit or as a follow-up commit
+before pushing.
+
+## Branching Policy
+
+- **Never commit directly to `main`**. Always create a new branch for changes.
+- Use descriptive branch names (e.g., `feat/add-feature`, `fix/bug-description`).
+- When pushing new commits to a PR, always update the PR summary to reflect all
+  changes.
+- **Do not push automatically**. Only push when explicitly asked.
