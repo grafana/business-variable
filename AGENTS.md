@@ -48,28 +48,28 @@ npm start
 
 ## Project Structure
 
-```
+```text
 src/
-├── module.ts                  # Plugin entry point (PanelPlugin registration)
-├── migration.ts               # Panel options migration between versions
-├── types/                     # TypeScript types, enums, interfaces
-│   └── index.ts               # Barrel exports
-├── constants/                 # Constants and test IDs
-│   ├── panel.ts               # Option arrays for panel config
-│   ├── variable.ts            # Variable-related constants
-│   └── tests.ts               # TEST_IDS object for all data-testid selectors
-├── hooks/                     # React hooks (useAutoSave, useTable, etc.)
-│   └── index.ts               # Barrel exports
-├── utils/                     # Pure utility functions
-│   └── index.ts               # Barrel exports
-├── components/                # React components
-│   ├── index.ts               # Barrel exports (only public components)
+├── module.ts              # Plugin entry point
+├── migration.ts           # Options migration
+├── types/                 # Types, enums, interfaces
+│   └── index.ts           # Barrel exports
+├── constants/             # Constants and test IDs
+│   ├── panel.ts           # Panel config options
+│   ├── variable.ts        # Variable constants
+│   └── tests.ts           # TEST_IDS selectors
+├── hooks/                 # React hooks
+│   └── index.ts           # Barrel exports
+├── utils/                 # Pure utility functions
+│   └── index.ts           # Barrel exports
+├── components/            # React components
+│   ├── index.ts           # Barrel exports
 │   └── ComponentName/
-│       ├── ComponentName.tsx        # Component implementation
-│       ├── ComponentName.styles.ts  # Styles (emotion CSS-in-JS)
-│       ├── ComponentName.test.tsx   # Tests
-│       └── index.ts                 # Re-export
-└── __mocks__/                 # Global jest mocks
+│       ├── ComponentName.tsx
+│       ├── ComponentName.styles.ts
+│       ├── ComponentName.test.tsx
+│       └── index.ts
+└── __mocks__/             # Global jest mocks
 ```
 
 ## Code Style Guidelines
@@ -83,8 +83,8 @@ src/
 
 ### Import Ordering
 
-Imports are auto-sorted by `eslint-plugin-simple-import-sort` and enforced as errors.
-The convention groups in this order:
+Imports are auto-sorted by `eslint-plugin-simple-import-sort`
+and enforced as errors. Groups in this order:
 
 1. External packages (`@grafana/*`, `@emotion/*`, `react`, etc.)
 2. Internal absolute imports (`../../hooks`, `../../types`, etc.)
@@ -100,38 +100,42 @@ import { selectVariableValues } from '../../utils';
 
 ### Naming Conventions (enforced by ESLint)
 
-| Element              | Convention         | Example                           |
-| -------------------- | ------------------ | --------------------------------- |
-| Variables, functions | `strictCamelCase`  | `getVariablesMap`                 |
-| Components (TSX)     | `StrictPascalCase` | `ButtonView`, `TableToolbar`      |
-| Types, interfaces    | `StrictPascalCase` | `PanelOptions`, `RuntimeVariable` |
-| Enums                | `StrictPascalCase` | `DisplayMode`, `VariableType`     |
-| Enum members         | `UPPER_CASE`       | `DisplayMode.TABLE`               |
-| Constants (global)   | `UPPER_CASE`       | `ALL_VALUE_PARAMETER`             |
-| Type parameters      | `T` or `K` prefix  | `TValue`, `KKey`                  |
-| Files: components    | `PascalCase.tsx`   | `ButtonView.tsx`                  |
-| Files: hooks         | `camelCase.ts`     | `useAutoSave.ts`                  |
-| Files: utils         | `kebab-case.ts`    | `event-utils.ts`, `dom-utils.ts`  |
-| Files: tests         | `*.test.ts(x)`     | `ButtonView.test.tsx`             |
-| Files: styles        | `*.styles.ts`      | `ButtonView.styles.ts`            |
+| Element            | Convention         | Example                |
+| ------------------ | ------------------ | ---------------------- |
+| Variables, funcs   | `strictCamelCase`  | `getVariablesMap`      |
+| Components (TSX)   | `StrictPascalCase` | `ButtonView`           |
+| Types, interfaces  | `StrictPascalCase` | `PanelOptions`         |
+| Enums              | `StrictPascalCase` | `DisplayMode`          |
+| Enum members       | `UPPER_CASE`       | `DisplayMode.TABLE`    |
+| Constants (global) | `UPPER_CASE`       | `ALL_VALUE_PARAMETER`  |
+| Type parameters    | `T` or `K` prefix  | `TValue`, `KKey`       |
+| Files: components  | `PascalCase.tsx`   | `ButtonView.tsx`       |
+| Files: hooks       | `camelCase.ts`     | `useAutoSave.ts`       |
+| Files: utils       | `kebab-case.ts`    | `event-utils.ts`       |
+| Files: tests       | `*.test.ts(x)`     | `ButtonView.test.tsx`  |
+| Files: styles      | `*.styles.ts`      | `ButtonView.styles.ts` |
 
 ### TypeScript Patterns
 
 - Use `enum` for fixed option sets (not union types):
+
   ```typescript
   export enum DisplayMode {
     MINIMIZE = 'minimize',
     TABLE = 'table',
   }
   ```
-- Use `interface` for object shapes; `type` for unions, intersections, and mapped types
-- Every exported interface/type property must have a JSDoc comment with `@type`:
+
+- Use `interface` for object shapes; `type` for unions/intersections
+- Every exported interface/type property needs a JSDoc `@type`:
+
   ```typescript
   interface Props {
     /** Options @type {PanelOptions} */
     options: PanelOptions;
   }
   ```
+
 - Avoid `any` — it triggers a warning. Use `unknown` or proper generics instead
 - `@typescript-eslint/no-empty-object-type` is disabled in this project
 
@@ -141,13 +145,16 @@ import { selectVariableValues } from '../../utils';
 - Props interface defined in the same file, above the component
 - Destructure props in the function signature
 - Use `useStyles2(getStyles)` for Emotion CSS-in-JS styling
-- Styles go in a separate `*.styles.ts` file exporting `getStyles(theme: GrafanaTheme2)`
-- Each component gets its own directory with `index.ts` barrel export
+- Styles in a separate `*.styles.ts` file exporting
+  `getStyles(theme: GrafanaTheme2)`
+- Each component gets its own directory with `index.ts`
+  barrel export
 
 ### JSDoc Comments
 
-All exported symbols (functions, components, constants, interfaces, enums) must have
-a JSDoc block comment. Internal sections within functions also use block comments:
+All exported symbols (functions, components, constants,
+interfaces, enums) must have a JSDoc block comment.
+Internal sections within functions also use block comments:
 
 ```typescript
 /**
@@ -164,13 +171,18 @@ export const ButtonView: React.FC<Props> = ({ ... }) => {
 
 - Jest + `@testing-library/react` + `@volkovlabs/jest-selectors`
 - Test files co-located next to source: `Component.test.tsx`
-- Use centralized `TEST_IDS` from `src/constants/tests.ts` for all `data-testid` selectors
-- Use `getJestSelectors(TEST_IDS.componentName)` for type-safe selector access
-- Mock external modules with `jest.mock()` at top of file with JSDoc label:
+- Use centralized `TEST_IDS` from `src/constants/tests.ts`
+  for all `data-testid` selectors
+- Use `getJestSelectors(TEST_IDS.componentName)` for
+  type-safe selector access
+- Mock external modules with `jest.mock()` at top of file
+  with JSDoc label:
+
   ```typescript
   /** Mock @grafana/runtime */
   jest.mock('@grafana/runtime', () => ({ ... }));
   ```
+
 - Use `describe()` blocks for grouping; `it()` or `test()` for individual cases
 - Test names start with "Should": `it('Should apply only first value', ...)`
 - Use `beforeEach` to clear mocks between tests
