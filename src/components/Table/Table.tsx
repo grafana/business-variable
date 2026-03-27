@@ -61,12 +61,12 @@ interface Props<TTableData extends TableItem> {
   /**
    * Table Ref
    */
-  tableRef?: RefObject<HTMLTableElement | null>;
+  tableRef?: RefObject<HTMLTableElement>;
 
   /**
    * Table Header Ref
    */
-  tableHeaderRef: RefObject<HTMLTableSectionElement | null>;
+  tableHeaderRef: RefObject<HTMLTableSectionElement>;
 
   /**
    * Top Offset
@@ -90,12 +90,12 @@ interface Props<TTableData extends TableItem> {
   /**
    * Is Panel Focused
    */
-  isFocused: RefObject<boolean>;
+  isFocused: React.MutableRefObject<boolean>;
 
   /**
    * Should scroll
    */
-  shouldScroll: RefObject<boolean>;
+  shouldScroll: React.MutableRefObject<boolean>;
 
   /**
    * Auto scroll option

@@ -21,7 +21,7 @@ interface TableToolbarProps {
   /**
    * header ref
    */
-  headerRef: React.RefObject<HTMLDivElement | null>;
+  headerRef: React.RefObject<HTMLDivElement>;
 
   /**
    * Sorted Groups
@@ -46,7 +46,7 @@ interface TableToolbarProps {
   /**
    * Should scroll
    */
-  shouldScroll: React.RefObject<boolean>;
+  shouldScroll: React.MutableRefObject<boolean>;
 
   /**
    * Set pinned groups action

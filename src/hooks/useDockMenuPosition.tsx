@@ -33,7 +33,7 @@ export const useDockMenuPosition = ({ position }: HookProps) => {
    * Refs
    */
   const dockMenuPosition = useRef<HTMLElement | null>(null);
-  const buttonTogglePosition = useRef<HTMLDivElement>(null);
+  const buttonTogglePosition = useRef<HTMLDivElement | null>(null);
   const nativeDockMenu = useRef<HTMLElement | null>(null);
 
   /**

@@ -208,8 +208,8 @@ describe('dock-menu utils', () => {
     let mockApplyVariables: jest.Mock;
     let mockClearMenuElements: jest.Mock;
     let mockRestoreNativeMenu: jest.Mock;
-    let mockDockMenuPosition: React.RefObject<HTMLElement | null>;
-    let mockButtonTogglePosition: React.RefObject<HTMLDivElement | null>;
+    let mockDockMenuPosition: React.MutableRefObject<HTMLElement | null>;
+    let mockButtonTogglePosition: React.MutableRefObject<HTMLDivElement | null>;
 
     beforeEach(() => {
       jest.clearAllMocks();
