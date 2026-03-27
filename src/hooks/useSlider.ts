@@ -11,7 +11,7 @@ export const useSlider = (variable?: RuntimeVariableWithOptions) => {
    */
   const options = useMemo(() => {
     return !variable?.options ? [] : variable.options;
-  }, [variable?.options]);
+  }, [variable]);
 
   /**
    * Min value
@@ -79,6 +79,7 @@ export const useSlider = (variable?: RuntimeVariableWithOptions) => {
    * Variable value was updated somewhere so update slider value
    */
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- sync state from prop change
     setValue(getIndexForVariableValue(variable, variableValue));
   }, [variable, variableValue]);
 

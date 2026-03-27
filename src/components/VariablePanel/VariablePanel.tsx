@@ -1,5 +1,5 @@
 import { EventBusSrv, PanelProps } from '@grafana/data';
-import React, { useRef } from 'react';
+import React, { useMemo } from 'react';
 
 import { useChangeTabTitle, useDashboardRedirect, usePersistentValues, useResetVariable } from '../../hooks';
 import { DisplayMode, PanelOptions } from '../../types';
@@ -20,7 +20,7 @@ export const VariablePanel: React.FC<Props> = ({ options, eventBus, replaceVaria
   /**
    * Panel scoped event bus
    */
-  const panelEventBus = useRef(new EventBusSrv());
+  const panelEventBus = useMemo(() => new EventBusSrv(), []);
 
   /**
    * Dashboard Redirect
@@ -43,26 +43,26 @@ export const VariablePanel: React.FC<Props> = ({ options, eventBus, replaceVaria
     eventBus,
     variableName: options.variable,
     enabled: options.persistent,
-    panelEventBus: panelEventBus.current,
+    panelEventBus,
   });
 
   /**
    * Reset variable
    */
-  useResetVariable({ eventBus, panelEventBus: panelEventBus.current, variableName: options.resetVariable });
+  useResetVariable({ eventBus, panelEventBus, variableName: options.resetVariable });
 
   /**
    * Minimize View
    */
   if (options.displayMode === DisplayMode.MINIMIZE) {
-    return <MinimizeView options={options} eventBus={eventBus} panelEventBus={panelEventBus.current} {...restProps} />;
+    return <MinimizeView options={options} eventBus={eventBus} panelEventBus={panelEventBus} {...restProps} />;
   }
 
   /**
    * Button View
    */
   if (options.displayMode === DisplayMode.BUTTON) {
-    return <ButtonView options={options} eventBus={eventBus} panelEventBus={panelEventBus.current} {...restProps} />;
+    return <ButtonView options={options} eventBus={eventBus} panelEventBus={panelEventBus} {...restProps} />;
   }
 
   /**
@@ -74,7 +74,7 @@ export const VariablePanel: React.FC<Props> = ({ options, eventBus, replaceVaria
         replaceVariables={replaceVariables}
         options={options}
         eventBus={eventBus}
-        panelEventBus={panelEventBus.current}
+        panelEventBus={panelEventBus}
         {...restProps}
       />
     );
@@ -88,7 +88,7 @@ export const VariablePanel: React.FC<Props> = ({ options, eventBus, replaceVaria
       replaceVariables={replaceVariables}
       options={options}
       eventBus={eventBus}
-      panelEventBus={panelEventBus.current}
+      panelEventBus={panelEventBus}
       {...restProps}
     />
   );

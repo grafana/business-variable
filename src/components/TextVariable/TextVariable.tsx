@@ -39,6 +39,7 @@ export const TextVariable: React.FC<Props> = ({ variable, panelEventBus }) => {
    * Sync variable and local value
    */
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- sync state from prop change
     setValue(variable.current.value?.toString() || '');
   }, [variable]);
 

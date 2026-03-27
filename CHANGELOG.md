@@ -4,6 +4,21 @@ All notable changes to the **Business Variable Panel** for Grafana are documente
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Upgraded Node to v22 and migrated to latest
+  `@grafana/create-plugin` scaffolding.
+- Updated all package dependencies to current versions.
+- Fixed all React Compiler lint errors (refs during render,
+  setState in effects, useMemo dependency mismatches).
+
+### Added
+
+- Added `AGENTS.md` with build/lint/test commands and code
+  style guidelines for agentic coding tools.
+
 ## [5.1.0] - 2025-10-29
 
 ### Project Updates
