@@ -20,6 +20,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   prevent Playwright ECONNREFUSED errors in CI.
 - Fixed brittle sticky header height E2E assertion to use a
   regex range instead of exact pixel value.
+- Fixed unawaited Playwright actions in E2E test helpers
+  causing React 19 race conditions.
 
 ### Added
 
