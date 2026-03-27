@@ -95,7 +95,7 @@ test.describe('Volkovlabs Variable Panel', () => {
       /**
        * Change variable value
        */
-      minimizeView.getTextInput().changeInputValue('test');
+      await minimizeView.getTextInput().changeInputValue('test');
       await page.waitForTimeout(400);
       const urlParams = new UrlHelper(await page.url());
       urlParams.checkVariable('var-text', 'test');
