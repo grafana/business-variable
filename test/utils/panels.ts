@@ -185,7 +185,7 @@ class TableViewHelper {
     return this.selectors.content();
   }
 
-  public async checkStyleProperty(property: string, value: string) {
+  public async checkStyleProperty(property: string, value: string | RegExp) {
     return expect(this.selectors.content().first(), this.getMsg('Check style property')).toHaveCSS(property, value);
   }
 

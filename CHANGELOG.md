@@ -14,6 +14,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Fixed all React Compiler lint errors (refs during render,
   setState in effects, useMemo dependency mismatches).
 
+### Fixed
+
+- Added healthcheck to Grafana service in docker-compose to
+  prevent Playwright ECONNREFUSED errors in CI.
+- Fixed brittle sticky header height E2E assertion to use a
+  regex range instead of exact pixel value.
+
 ### Added
 
 - Added `AGENTS.md` with build/lint/test commands and code

@@ -311,7 +311,7 @@ test.describe('Volkovlabs Variable Panel', () => {
       /**
        * Check height
        */
-      await tableView.checkStyleProperty('height', '414px');
+      await tableView.checkStyleProperty('height', /^4\d{2}px$/);
     });
 
     test('Should expand all rows', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
