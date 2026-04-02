@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   `@grafana/create-plugin` scaffolding.
 - Updated all package dependencies to current versions via
   `npm update`.
+- Replaced deprecated `react-beautiful-dnd` with
+  `@hello-pangea/dnd` (drop-in fork).
 - Fixed all React Compiler lint errors (refs during render,
   setState in effects, useMemo dependency mismatches).
 - Updated Playwright Docker image to v1.59.1 to match

@@ -9,7 +9,7 @@ import {
   Droppable,
   DropResult,
   NotDraggingStyle,
-} from 'react-beautiful-dnd';
+} from '@hello-pangea/dnd';
 
 import { OPTIONS_NOT_AVAILABLE_MESSAGE, TEST_IDS } from '../../constants';
 import { LevelsGroup, PanelOptions } from '../../types';
