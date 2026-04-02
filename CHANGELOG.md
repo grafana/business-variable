@@ -40,6 +40,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Fixed SQL injection pattern in timescale server by using
   parameterized queries.
 - Renamed `timescale/` directory to `timescale-setup/`.
+- Fixed `npm run stop` to include all profiles and remove
+  orphaned containers.
 
 ### Added
 
