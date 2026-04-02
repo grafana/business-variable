@@ -20,6 +20,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   timescale Dockerfile.
 - Switched timescale Dockerfile from `yarn` to `npm` for
   consistency with the rest of the project.
+- Simplified docker-compose: removed legacy `grafana-dev`,
+  `grafana-main`, and `grafana-dep` services; consolidated
+  profiles to `playwright`.
+- Simplified npm scripts: removed `start:dep` and
+  `start:main`, updated `test:e2e:docker` to use
+  `playwright` profile, added `--coverage` to `test:ci`.
 
 ### Fixed
 
