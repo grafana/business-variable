@@ -8,9 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- Upgraded Node to v22 and migrated to latest
+- Upgraded Node to v24 and migrated to latest
   `@grafana/create-plugin` scaffolding.
-- Updated all package dependencies to current versions.
+- Updated all package dependencies to current versions via
+  `npm update`.
 - Fixed all React Compiler lint errors (refs during render,
   setState in effects, useMemo dependency mismatches).
 
@@ -27,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Added `AGENTS.md` with build/lint/test commands and code
   style guidelines for agentic coding tools.
+- Added `cspell.config.json` for spell checking.
 
 ## [5.1.0] - 2025-10-29
 
