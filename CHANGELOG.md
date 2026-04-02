@@ -51,6 +51,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Added `cspell.config.json` for spell checking.
 - Added CI workflow for Jest coverage report on PRs.
 - Added CI workflow for PR file changes summary.
+- Fixed coverage workflow to use hardcoded Node version
+  for base branch checkout.
 
 ## [5.1.0] - 2025-10-29
 
