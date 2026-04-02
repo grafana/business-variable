@@ -147,6 +147,9 @@ import { selectVariableValues } from '../../utils';
 - Use `useStyles2(getStyles)` for Emotion CSS-in-JS styling
 - Styles in a separate `*.styles.ts` file exporting
   `getStyles(theme: GrafanaTheme2)`
+- Wrap callbacks in `useCallback` with explicit dependency arrays
+- All testable elements must use
+  `data-testid={TEST_IDS.section.element}`
 - Each component gets its own directory with `index.ts`
   barrel export
 
@@ -183,23 +186,97 @@ export const ButtonView: React.FC<Props> = ({ ... }) => {
   jest.mock('@grafana/runtime', () => ({ ... }));
   ```
 
-- Use `describe()` blocks for grouping; `it()` or `test()` for individual cases
-- Test names start with "Should": `it('Should apply only first value', ...)`
+- Define a `getComponent` factory returning a rendered
+  component with sensible defaults
+- Use `describe()` blocks for grouping; `it()` or `test()`
+  for individual cases
+- Test names start with "Should":
+  `it('Should apply only first value', ...)`
+- Assert with `screen.getByTestId(TEST_IDS.xxx.yyy)`
 - Use `beforeEach` to clear mocks between tests
-- Hook tests use `renderHook()` from `@testing-library/react`
-- Timezone forced to UTC in jest config (`process.env.TZ = 'UTC'`)
+- Use `act()` + `render()` for components with async
+  side effects
+- Hook tests use `renderHook()` from
+  `@testing-library/react`
+- Timezone forced to UTC in jest config
+  (`process.env.TZ = 'UTC'`)
 
 ### Error Handling
 
-- Display user-facing errors via Grafana `<Alert>` component
-- No `console.log` or `console.error` — `no-console` is enforced as an error
+- Use **try/catch** in async effects; store errors in state
+- Display user-facing errors via Grafana
+  `<Alert severity="error">` component
+- Format: `error instanceof Error ? error.message : \`${error}\``
+- Effects that subscribe must return cleanup functions
+  calling `unsubscribe()`
+- No `console.log` or `console.error` — `no-console` is
+  enforced as an error
 - No `debugger` statements
 
 ### Markdown Lint
 
-Always run `npx markdownlint-cli <file>` when updating
-`.md` files and fix any issues before committing. This
-includes `AGENTS.md`, `README.md`, and `CHANGELOG.md`.
+Run `npx markdownlint-cli` on any `.md` file you create or modify
+(including `AGENTS.md`, `README.md`, `CHANGELOG.md`) and fix all reported
+issues before committing.
+
+### Spell Check
+
+Run `npx cspell@6.13.3 -c cspell.config.json` on any `.md`
+file you create or modify and fix all reported issues before
+committing. Add new words to `cspell.config.json` if they
+are legitimate.
+
+### ESLint
+
+Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js`,
+`@volkovlabs/eslint-config`, and `eslint-config-prettier`. Custom rule:
+`@typescript-eslint/no-empty-object-type: off`. Test files, mocks,
+config files, and server dirs are excluded from linting.
+
+### CI/CD
+
+- **CI** (`.github/workflows/push.yml`): Runs on push to `main`
+  and all PRs. Uses `grafana/plugin-ci-workflows`.
+- **CD** (`.github/workflows/publish.yml`): Manual dispatch to
+  dev/ops/prod environments.
+- The `.config/` directory is **scaffolded by Grafana** —
+  do not edit files in it.
+
+## Critical Rules
+
+- **Prefer subagents** for research, code exploration,
+  and multi-step work. Use the Task tool with
+  `explore` or `general` agents rather than running
+  many search/read commands directly. Launch multiple
+  agents in parallel when tasks are independent.
+- **Never modify anything inside `.config/`** —
+  managed by Grafana plugin tooling.
+- **Never change `id` or `type`** in `src/plugin.json`.
+- Changes to `plugin.json` require a
+  **Grafana server restart**.
+- Use webpack from `.config/` for builds;
+  do not add a custom bundler.
+- Use `@grafana/plugin-e2e` for E2E tests.
+- Grafana API docs:
+  <https://grafana.com/developers/plugin-tools/llms.txt>
+- **Always run `npx markdownlint-cli`** on any `.md`
+  file you create or modify (including `AGENTS.md`,
+  `README.md`, `CHANGELOG.md`) and fix all reported
+  issues before committing.
+- **Always run cspell** after making changes:
+  `npx cspell@6.13.3 -c cspell.config.json
+  "**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}"`
+  and fix any issues before committing. Add new words
+  to `cspell.config.json` if they are legitimate.
+- **Always update `CHANGELOG.md`** when committing any
+  change. Include the changelog update in the same commit.
+  Run `npx markdownlint-cli` on it before committing.
+- **NEVER commit unless the user explicitly asks.**
+  Do not commit as part of completing a task.
+- **NEVER push unless the user explicitly asks.**
+  Do not push as part of completing a task.
+  Never chain `git commit && git push` in one command.
+  Always wait for the user to explicitly ask to push.
 
 ### Additional Rules
 
@@ -224,5 +301,7 @@ before pushing.
 - Use descriptive branch names (e.g., `feat/add-feature`, `fix/bug-description`).
 - When pushing new commits to a PR, always update the PR summary to reflect all
   changes.
+- **Always create pull requests as drafts**
+  (`gh pr create --draft`).
 - **Do not commit automatically**. Only commit when explicitly asked.
 - **Do not push automatically**. Only push when explicitly asked.
