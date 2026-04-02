@@ -1,15 +1,29 @@
 # Business Variable for Grafana
+
 [![CI](https://github.com/grafana/business-variable/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-variable/actions/workflows/push.yml)
 [![CD](https://github.com/grafana/business-variable/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-variable/actions/workflows/publish.yml)
 [![License](https://img.shields.io/github/license/grafana/business-variable)](https://github.com/grafana/business-variable/blob/main/LICENSE)
 
->This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-variable) - thanks for all your great work!
+> This project was originally contributed by
+> [Volkov Labs](https://github.com/volkovlabs/business-variable) —
+> thanks for all your great work!
 >
->We have republished under the same plugin ID, keeping the community signature. This means you can simply update your plugin version. A new ID would have required manual updates to your dashboards. For additional information on the changes, see the [Notices](https://github.com/grafana/business-variable/blob/main/NOTICES.md).
+> We have republished under the same plugin ID, keeping the community
+> signature. This means you can simply update your plugin version. A
+> new ID would have required manual updates to your dashboards. For
+> additional information on the changes, see the
+> [Notices](https://github.com/grafana/business-variable/blob/main/NOTICES.md).
 
-This project is currently maintained by Grafana Labs. We welcome pull requests and will review them on a best-effort basis. If you're interested in taking on this project long-term, contact [integrations@grafana.com](mailto:integrations@grafana.com). We're eager to work with new maintainers and eventually hand over the project.
+This project is currently maintained by Grafana Labs. We welcome pull
+requests and will review them on a best-effort basis. If you're
+interested in taking on this project long-term, contact
+[integrations@grafana.com](mailto:integrations@grafana.com). We're
+eager to work with new maintainers and eventually hand over the project.
 
-**Business Variable** transforms how you interact with Grafana dashboard variables. Place it anywhere on your dashboard and choose from multiple layouts, including an advanced **TreeView** option, to simplify filtering and boost usability.
+**Business Variable** transforms how you interact with Grafana
+dashboard variables. Place it anywhere on your dashboard and choose
+from multiple layouts, including an advanced **TreeView** option, to
+simplify filtering and boost usability.
 
 ## 🚀 Key Features
 
@@ -35,7 +49,9 @@ This project is currently maintained by Grafana Labs. We welcome pull requests a
 
 ## 🛠️ Installation
 
-Install the Business Variable panel through the [Grafana Plugins Catalog](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/) or using the Grafana CLI:
+Install the Business Variable panel through the
+[Grafana Plugins Catalog](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/)
+or using the Grafana CLI:
 
 ```bash
 grafana-cli plugins install volkovlabs-variable-panel
@@ -47,13 +63,13 @@ After installation, restart Grafana and add the **Business Variable** panel to y
 
 Dive into detailed guides to make the most of Business Variable:
 
-| Section                                                                   | Description                          |
-| ------------------------------------------------------------------------- | ------------------------------------ |
-| [Data flow](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/data-flow/)   | Understand the panel's data flow     |
-| [Display mode](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/display-mode/)  | Explore layout customization options |
-| [Features](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/features/)     | Learn about key capabilities         |
-| [Tutorials](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/tutorials/)   | Follow step-by-step guides           |
-| [Release notes](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/release/) | Stay updated with recent changes     |
+| Section | Description |
+| ------- | ----------- |
+| [Data flow](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/data-flow/) | Understand the panel's data flow |
+| [Display mode](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/display-mode/) | Explore layout customization options |
+| [Features](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/features/) | Learn about key capabilities |
+| [Tutorials](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/tutorials/) | Follow step-by-step guides |
+| [Release notes](https://grafana.com/docs/plugins/volkovlabs-variable-panel/latest/release/) | Stay updated with recent changes |
 
 ## 📜 License
 
