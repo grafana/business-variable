@@ -1,7 +1,6 @@
 import { cx } from '@emotion/css';
 import { DataFrame, SelectableValue } from '@grafana/data';
 import { Button, Icon, IconButton, InlineField, InlineFieldRow, Select, useTheme2 } from '@grafana/ui';
-import React, { useCallback, useMemo, useState } from 'react';
 import {
   DragDropContext,
   Draggable,
@@ -10,6 +9,7 @@ import {
   DropResult,
   NotDraggingStyle,
 } from '@hello-pangea/dnd';
+import React, { useCallback, useMemo, useState } from 'react';
 
 import { TEST_IDS } from '../../constants';
 import { Level, LevelsGroup } from '../../types';

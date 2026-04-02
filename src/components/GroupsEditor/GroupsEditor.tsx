@@ -1,7 +1,6 @@
 import { cx } from '@emotion/css';
 import { StandardEditorProps } from '@grafana/data';
 import { Button, Collapse, Icon, InlineField, InlineFieldRow, InlineLabel, Input, Stack, useTheme2 } from '@grafana/ui';
-import React, { useCallback, useMemo, useState } from 'react';
 import {
   DragDropContext,
   Draggable,
@@ -10,6 +9,7 @@ import {
   DropResult,
   NotDraggingStyle,
 } from '@hello-pangea/dnd';
+import React, { useCallback, useMemo, useState } from 'react';
 
 import { OPTIONS_NOT_AVAILABLE_MESSAGE, TEST_IDS } from '../../constants';
 import { LevelsGroup, PanelOptions } from '../../types';

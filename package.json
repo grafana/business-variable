@@ -84,7 +84,7 @@
     "node": ">=24"
   },
   "dependencies": {
-    "@emotion/css": "11.10.6",
+    "@emotion/css": "^11.13.5",
     "@grafana/data": "^12.3.0",
     "@grafana/i18n": "^12.4.0",
     "@grafana/runtime": "^12.3.0",
@@ -93,7 +93,7 @@
     "@grafana/ui": "^12.3.0",
     "@hello-pangea/dnd": "^18.0.1",
     "@tanstack/react-table": "^8.21.3",
-    "@tanstack/react-virtual": "3.13.9",
+    "@tanstack/react-virtual": "^3.13.23",
     "@volkovlabs/components": "^4.6.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
