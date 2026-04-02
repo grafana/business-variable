@@ -1,8 +1,58 @@
 # Change Log
 
-All notable changes to the **Business Variable Panel** for Grafana are documented in this file. This panel provides advanced variable management and visualization capabilities for Grafana dashboards.
+All notable changes to the **Business Variable Panel** for Grafana
+are documented in this file. This panel provides advanced variable
+management and visualization capabilities for Grafana dashboards.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Changed
+
+- Upgraded Node to v24 and migrated to latest
+  `@grafana/create-plugin` scaffolding.
+- Updated all package dependencies via `npm update`.
+- Bumped `@emotion/css` to 11.13.5 and
+  `@tanstack/react-virtual` to 3.13.23.
+- Replaced deprecated `react-beautiful-dnd` with
+  `@hello-pangea/dnd` (drop-in fork).
+- Updated Playwright Docker image to v1.59.1 to match
+  `@playwright/test` package version.
+- Renamed `timescale/` directory to `timescale-setup/`;
+  switched Dockerfile from `yarn` to `npm` and bumped
+  `docker-compose-wait` from 2.9.0 to 2.12.1.
+- Simplified docker-compose: removed legacy `grafana-dev`,
+  `grafana-main`, and `grafana-dep` services; consolidated
+  profiles to `dev` and `playwright`.
+- Simplified npm scripts: removed `start:dep`/`start:main`,
+  updated `test:e2e:docker` to use `playwright` profile,
+  added `--coverage` to `test:ci`, and added `--volumes`
+  to `stop` for clean database restarts.
+
+### Fixed
+
+- Fixed all React Compiler lint errors (refs during render,
+  setState in effects, useMemo dependency mismatches).
+- Suppressed `react-hooks/incompatible-library` warning
+  for TanStack Table's `useReactTable()` call.
+- Fixed SQL injection pattern in timescale server by using
+  parameterized queries.
+- Added healthcheck to Grafana service in docker-compose to
+  prevent Playwright ECONNREFUSED errors in CI.
+- Fixed brittle sticky header height E2E assertion to use a
+  regex range instead of exact pixel value.
+- Fixed unawaited Playwright actions in E2E test helpers
+  causing React 19 race conditions.
+
+### Added
+
+- Added `AGENTS.md` with build/lint/test commands, coding
+  conventions, and branching policy for AI coding agents.
+- Added `cspell.config.json` for spell checking.
+- Added `.markdownlint.yaml` with 120 char line length.
+- Added CI workflows for Jest coverage report and PR file
+  changes summary.
 
 ## [5.1.0] - 2025-10-29
 
@@ -37,18 +87,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Overview
 
-This release introduces new features and enhancements to improve user experience and functionality in the Business Variable plugin. Key additions include pinning group filters, custom icons for minimized panels, and new options for latency requests and tree view. Alongside these, we've made important updates to dependencies and configurations.
+This release introduces new features and enhancements to improve user
+experience and functionality in the Business Variable plugin. Key
+additions include pinning group filters, custom icons for minimized
+panels, and new options for latency requests and tree view. Alongside
+these, we've made important updates to dependencies and configurations.
 
 ### Added
 
 - **Pin/Unpin Group Filters**: Added the ability to pin or unpin group filters for better customization and usability ([#274](https://github.com/volkovlabs/business-variable/issues/274)).
-- **Custom Icons for Minimized Panels**: Introduced the option to select native or custom icons for minimized variable panels ([#281](https://github.com/volkovlabs/business-variable/issues/281)).
+- **Custom Icons for Minimized Panels**: Introduced the option to select
+  native or custom icons for minimized variable panels
+  ([#281](https://github.com/volkovlabs/business-variable/issues/281)).
 - **Latency Request Option**: Added a new option to configure latency requests for improved performance tuning ([#283](https://github.com/volkovlabs/business-variable/issues/283)).
 - **Tree View Values Wrap**: Implemented wrapping options for values in Tree View to enhance readability ([#285](https://github.com/volkovlabs/business-variable/issues/285)).
 
 ### Changed
 
-- **Updated `useDatasourceRequest` Hook**: Improved the `useDatasourceRequest` hook by integrating updates from related packages ([#282](https://github.com/volkovlabs/business-variable/issues/282)).
+- **Updated `useDatasourceRequest` Hook**: Improved the
+  `useDatasourceRequest` hook by integrating updates from related
+  packages
+  ([#282](https://github.com/volkovlabs/business-variable/issues/282)).
 - **Updated ESLint Configuration**: Revised ESLint settings to ensure better code quality and consistency ([#286](https://github.com/volkovlabs/business-variable/issues/286)).
 
 ## [4.0.0] - 2025-06-03

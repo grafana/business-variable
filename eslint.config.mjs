@@ -34,7 +34,7 @@ export default defineConfig(
     'src/__mocks__/**',
     'src/**/*.test.ts*',
     'test/*',
-    'timescale/*',
+    'timescale-setup/*',
     'webpack.config.ts',
   ])
 );

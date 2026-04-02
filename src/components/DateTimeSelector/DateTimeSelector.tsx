@@ -1,6 +1,6 @@
 import { DateTime, dateTime, EventBus } from '@grafana/data';
 import { DateTimePicker } from '@grafana/ui';
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback } from 'react';
 
 import { TEST_IDS } from '../../constants';
 import { usePersistentStorage } from '../../hooks';
@@ -71,15 +71,11 @@ export const DateTimeSelector: React.FC<Props> = ({
    */
   const persistentStorage = usePersistentStorage(variable.name);
 
-  const value = useMemo(() => {
-    if (!variable.current.value) {
-      return '';
-    }
-    const value = !isNaN(Number(variable.current.value))
-      ? Number(variable.current.value)
-      : variable.current.value.toString();
-    return value;
-  }, [variable]);
+  const currentValue = variable.current.value;
+  let value: string | number = '';
+  if (currentValue) {
+    value = !isNaN(Number(currentValue)) ? Number(currentValue) : currentValue.toString();
+  }
 
   /**
    * On Change

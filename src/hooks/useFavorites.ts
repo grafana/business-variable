@@ -311,14 +311,6 @@ export const useFavorites = ({
   const model = useFavoritesModel({ config, replaceVariables });
 
   /**
-   * Get Favorites Data
-   */
-  const getData = useCallback(async () => {
-    const result = await model.get();
-    setData(result);
-  }, [model]);
-
-  /**
    * Add to favorites
    */
   const add = useCallback(
@@ -364,10 +356,19 @@ export const useFavorites = ({
   );
 
   /**
+   * Get Favorites Data
+   */
+  const getData = useCallback(async () => {
+    const result = await model.get();
+    setData(result);
+  }, [model]);
+
+  /**
    * Load Initial Data
    */
   useEffect(() => {
     if (config.enabled) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- async data fetch
       getData();
     }
   }, [config.enabled, getData]);

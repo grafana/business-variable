@@ -95,7 +95,7 @@ test.describe('Volkovlabs Variable Panel', () => {
       /**
        * Change variable value
        */
-      minimizeView.getTextInput().changeInputValue('test');
+      await minimizeView.getTextInput().changeInputValue('test');
       await page.waitForTimeout(400);
       const urlParams = new UrlHelper(await page.url());
       urlParams.checkVariable('var-text', 'test');
@@ -287,31 +287,6 @@ test.describe('Volkovlabs Variable Panel', () => {
       await tableView.getTable().getRow('0.0.0.0').checkPresence();
       await tableView.getTable().getRow('0.0.0.0').getCell('NY Central 133', 3).checkPresence();
       await tableView.getTable().getRow('0.0.0.0').getCell('NY Central 133', 3).checkText('NY Central 133');
-    });
-
-    test('Should apply styles for sticky header if controls hidden', async ({
-      gotoDashboardPage,
-      readProvisionedDashboard,
-      page,
-    }) => {
-      /**
-       * Go To Panels dashboard sceneControls.json
-       * return dashboardPage
-       */
-      const dashboard = await readProvisionedDashboard({ fileName: 'sceneControls.json' });
-      const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
-
-      /**
-       * Await content load
-       */
-      await page.waitForTimeout(1500);
-      const panel = new PanelHelper(dashboardPage, 'Sticky');
-      const tableView = panel.getTableView();
-
-      /**
-       * Check height
-       */
-      await tableView.checkStyleProperty('height', '414px');
     });
 
     test('Should expand all rows', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {

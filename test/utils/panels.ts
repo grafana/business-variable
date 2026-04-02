@@ -185,7 +185,7 @@ class TableViewHelper {
     return this.selectors.content();
   }
 
-  public async checkStyleProperty(property: string, value: string) {
+  public async checkStyleProperty(property: string, value: string | RegExp) {
     return expect(this.selectors.content().first(), this.getMsg('Check style property')).toHaveCSS(property, value);
   }
 
@@ -256,9 +256,9 @@ class TextVariableHelper {
     return getTextSelectors(locator);
   }
 
-  public changeInputValue(value: string) {
-    this.selectors.root().fill(value);
-    this.selectors.root().blur();
+  public async changeInputValue(value: string) {
+    await this.selectors.root().fill(value);
+    await this.selectors.root().blur();
   }
 }
 
@@ -285,12 +285,12 @@ class SelectVariableHelper {
   }
 
   public async changeValue(dashboardPage: DashboardPage, value: string) {
-    this.selectors.root().click();
+    await this.selectors.root().click();
     await dashboardPage
       .getByGrafanaSelector(dashboardPage.ctx.selectors.components.Select.option)
       .getByText(value)
       .click();
-    this.selectors.root().blur();
+    await this.selectors.root().blur();
   }
 }
 
@@ -322,8 +322,8 @@ class MinimizeViewHelper {
     return getTextSelectors(locator);
   }
 
-  public getFocusOnView = () => {
-    this.selectors.root().focus();
+  public getFocusOnView = async () => {
+    await this.selectors.root().focus();
   };
   public getTextInput() {
     return new TextVariableHelper(this.locator);
