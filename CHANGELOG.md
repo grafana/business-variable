@@ -14,6 +14,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   `npm update`.
 - Fixed all React Compiler lint errors (refs during render,
   setState in effects, useMemo dependency mismatches).
+- Updated Playwright Docker image to v1.59.1 to match
+  `@playwright/test` package version.
+- Updated `docker-compose-wait` from 2.9.0 to 2.12.1 in
+  timescale Dockerfile.
+- Switched timescale Dockerfile from `yarn` to `npm` for
+  consistency with the rest of the project.
 
 ### Fixed
 
@@ -23,6 +29,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   regex range instead of exact pixel value.
 - Fixed unawaited Playwright actions in E2E test helpers
   causing React 19 race conditions.
+- Fixed cspell configuration: added missing domain words
+  and ignored `provisioning` directory.
 
 ### Added
 
