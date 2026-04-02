@@ -18,7 +18,7 @@ const addMetrics = async () => {
   temps = temps.map((temp) => temp + Math.random());
 
   temps.forEach(async (temp, i) => {
-    await client.query(`insert into metrics values(nextval('seq_metrics'), now(), '${names[i]}', ${temp});`);
+    await client.query('INSERT INTO metrics VALUES(nextval(\'seq_metrics\'), now(), $1, $2)', [names[i], temp]);
   });
 
   let timeout = 1000;

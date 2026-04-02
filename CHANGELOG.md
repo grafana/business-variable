@@ -37,6 +37,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   causing React 19 race conditions.
 - Fixed cspell configuration: added missing domain words
   and ignored `provisioning` directory.
+- Fixed SQL injection pattern in timescale server by using
+  parameterized queries.
 
 ### Added
 
