@@ -287,6 +287,10 @@ Flat config (ESLint 9) extending
   change that modifies code, documentation, dependencies,
   or configuration. Include the changelog update in the
   same commit.
+- **Always run `git status`** before constructing
+  `git add` commands. Only add files that are unstaged
+  or untracked — do not add files that are already
+  staged or deleted.
 - **NEVER commit unless the user explicitly asks.**
 - **NEVER push unless the user explicitly asks.** Never
   chain `git commit && git push` in one command.
