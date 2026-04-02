@@ -12,56 +12,47 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Upgraded Node to v24 and migrated to latest
   `@grafana/create-plugin` scaffolding.
-- Updated all package dependencies to current versions via
-  `npm update`.
-- Replaced deprecated `react-beautiful-dnd` with
-  `@hello-pangea/dnd` (drop-in fork).
+- Updated all package dependencies via `npm update`.
 - Bumped `@emotion/css` to 11.13.5 and
   `@tanstack/react-virtual` to 3.13.23.
-- Fixed all React Compiler lint errors (refs during render,
-  setState in effects, useMemo dependency mismatches).
+- Replaced deprecated `react-beautiful-dnd` with
+  `@hello-pangea/dnd` (drop-in fork).
 - Updated Playwright Docker image to v1.59.1 to match
   `@playwright/test` package version.
-- Updated `docker-compose-wait` from 2.9.0 to 2.12.1 in
-  timescale Dockerfile.
-- Switched timescale Dockerfile from `yarn` to `npm` for
-  consistency with the rest of the project.
+- Renamed `timescale/` directory to `timescale-setup/`;
+  switched Dockerfile from `yarn` to `npm` and bumped
+  `docker-compose-wait` from 2.9.0 to 2.12.1.
 - Simplified docker-compose: removed legacy `grafana-dev`,
   `grafana-main`, and `grafana-dep` services; consolidated
   profiles to `dev` and `playwright`.
-- Suppressed `react-hooks/incompatible-library` warning
-  for TanStack Table's `useReactTable()` call.
-- Simplified npm scripts: removed `start:dep` and
-  `start:main`, updated `test:e2e:docker` to use
-  `playwright` profile, added `--coverage` to `test:ci`.
+- Simplified npm scripts: removed `start:dep`/`start:main`,
+  updated `test:e2e:docker` to use `playwright` profile,
+  added `--coverage` to `test:ci`, and added `--volumes`
+  to `stop` for clean database restarts.
 
 ### Fixed
 
+- Fixed all React Compiler lint errors (refs during render,
+  setState in effects, useMemo dependency mismatches).
+- Suppressed `react-hooks/incompatible-library` warning
+  for TanStack Table's `useReactTable()` call.
+- Fixed SQL injection pattern in timescale server by using
+  parameterized queries.
 - Added healthcheck to Grafana service in docker-compose to
   prevent Playwright ECONNREFUSED errors in CI.
 - Fixed brittle sticky header height E2E assertion to use a
   regex range instead of exact pixel value.
 - Fixed unawaited Playwright actions in E2E test helpers
   causing React 19 race conditions.
-- Fixed cspell configuration: added missing domain words
-  and ignored `provisioning` directory.
-- Fixed SQL injection pattern in timescale server by using
-  parameterized queries.
-- Renamed `timescale/` directory to `timescale-setup/` and
-  updated ESLint ignore path.
-- Fixed `npm run stop` to include all profiles, remove
-  orphaned containers, and clean up volumes for fresh
-  database on next start.
 
 ### Added
 
-- Added `AGENTS.md` with build/lint/test commands and code
-  style guidelines for agentic coding tools.
+- Added `AGENTS.md` with build/lint/test commands, coding
+  conventions, and branching policy for AI coding agents.
 - Added `cspell.config.json` for spell checking.
-- Added CI workflow for Jest coverage report on PRs.
-- Added CI workflow for PR file changes summary.
-- Fixed coverage workflow to use hardcoded Node version
-  for base branch checkout.
+- Added `.markdownlint.yaml` with 120 char line length.
+- Added CI workflows for Jest coverage report and PR file
+  changes summary.
 
 ## [5.1.0] - 2025-10-29
 
