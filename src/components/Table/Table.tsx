@@ -170,6 +170,7 @@ export const Table = <TTableData extends TableItem>({
   /**
    * Instance
    */
+  // eslint-disable-next-line react-hooks/incompatible-library
   const tableInstance = useReactTable<TTableData>({
     columns,
     data,

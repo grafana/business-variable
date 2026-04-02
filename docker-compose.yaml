@@ -10,18 +10,12 @@ services:
       GF_DEFAULT_APP_MODE: development
       GF_PLUGINS_PREINSTALL: marcusolsson-static-datasource
       GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /etc/grafana/provisioning/dashboards/home.json
-    depends_on:
-      server:
-        condition: service_started
     healthcheck:
       test: ['CMD-SHELL', 'wget --no-verbose --tries=1 --spider http://localhost:3000/api/health || exit 1']
       interval: 5s
       timeout: 5s
       retries: 10
       start_period: 30s
-    profiles:
-      - dev
-      - playwright
 
   timescale:
     image: timescale/timescaledb:latest-pg14
