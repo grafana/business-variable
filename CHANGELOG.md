@@ -43,6 +43,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Added `AGENTS.md` with build/lint/test commands and code
   style guidelines for agentic coding tools.
 - Added `cspell.config.json` for spell checking.
+- Added CI workflow for Jest coverage report on PRs.
+- Added CI workflow for PR file changes summary.
 
 ## [5.1.0] - 2025-10-29
 
