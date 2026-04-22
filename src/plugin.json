@@ -15,7 +15,7 @@
     "links": [
       {
         "name": "Documentation",
-        "url": "https://grafana.com/docs/plugins/volkovlabs-table-panel/"
+        "url": "https://grafana.com/docs/plugins/volkovlabs-variable-panel/"
       }
     ],
     "logos": {
