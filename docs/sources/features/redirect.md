@@ -24,10 +24,6 @@ This feature lets you open a corresponding dashboard when you select a variable 
 
 When you select a device in the Business Variable panel, the corresponding dashboard opens. The dashboard switch is seamless, so users might not realize they switched dashboards.
 
-The following video shows how to configure this feature.
-
-{{< youtube id="TtC2bh7a4fE" >}}
-
 ## Map dashboard variables
 
 Create two dashboard variables:
