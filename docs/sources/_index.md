@@ -26,8 +26,6 @@ The Business Variable panel offers many layouts with robust options, including a
 
 The Business Variable panel can be installed from the [Grafana Catalog](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/) or utilizing the Grafana command line tool.
 
-{{< youtube id="1qYzHfPXJF8" >}}
-
 To install using the command line, run the following command:
 
 ```sh
@@ -45,27 +43,6 @@ grafana cli plugins install volkovlabs-variable-panel
 - Create multiple TreeViews using groups and tabs.
 - Use input text (**Input box**) variables.
 
-## Tutorial
-
-This video reviews the latest features in Business Variable 3.0.0.
-
-The video demonstrates many new options for the **Minimize** mode, such as:
-
-- Allow empty value,
-- Allow custom values,
-- Maximum visible values.
-
-For the **Table** mode, the video explains how to display total and selected counts.
-The video also introduces the **Slider** mode and covers TreeView layout improvements and advanced features.
-
-{{< youtube id="vcdcLDVQYek" >}}
-
-For an overview of all plugin options, watch the following video.
-
-{{< youtube id="1ogv2jstrlI" >}}
-
-To learn more about this plugin, see [Tutorials](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/tutorials/).
-
 ## Documentation
 
 | Section                   | Description                              |
@@ -73,7 +50,6 @@ To learn more about this plugin, see [Tutorials](https://grafana.com/docs/plugin
 | [Data flow](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/data-flow/)   | Explains the Business Variable data flow |
 | [Display mode](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/display-mode/)  | Explains different display modes         |
 | [Features](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/features/)      | Explains panel features                  |
-| [Tutorials](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/tutorials/)    | Easy to follow tutorials                 |
 | [Release notes](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/release/) | The latest features and updates          |
 
 ## License
