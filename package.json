@@ -100,5 +100,5 @@
     "semver": "^7.7.2",
     "tslib": "^2.8.0"
   },
-  "packageManager": "npm@11.9.0"
+  "packageManager": "npm@11.13.0"
 }
