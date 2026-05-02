@@ -29,6 +29,11 @@ export default defineConfig<PluginOptions>({
   retries: process.env.CI ? 2 : 0,
 
   /**
+   * Single worker — all tests share one Grafana instance, parallel execution causes state interference.
+   */
+  workers: 1,
+
+  /**
    * Reporter to use. See https://playwright.dev/docs/test-reporters
    */
   reporter: [['html', { open: 'never' }]],
