@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Breaking changes
+
+- Requires Grafana 12.3 or later; updated for React 19 compatibility.
+
 ## [5.1.0] - 2025-10-29
 
 ### Project Updates
