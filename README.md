@@ -44,7 +44,8 @@ simplify filtering and boost usability.
 
 | Plugin Version                | Compatible Grafana Versions |
 | ----------------------------- | --------------------------- |
-| **Business Variable 5.x**     | Grafana 12.3 or later       |
+| **Business Variable 5.2+**    | Grafana 12.3 or later       |
+| **Business Variable 5.0–5.1** | Grafana 11.5 or 12          |
 | **Business Variable 4.x**     | Grafana 11 or 12            |
 | **Business Variable 3.x**     | Grafana 10.3 or 11          |
 | **Business Variable 1.x/2.x** | Grafana 9.2 or 10           |
