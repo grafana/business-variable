@@ -80,6 +80,7 @@
     "dist",
     ".config",
     "coverage",
+    "playwright-report",
     "provisioning"
   ]
 }

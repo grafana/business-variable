@@ -11,6 +11,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Project Updates
 
 - Suppressed i18next/Locize marketing banner in Jest output (`jest-setup.js`).
+- Fixed E2E test "Should add new empty variable panel": use `e2e-empty.json` provisioned dashboard
+  instead of `panels.json` to avoid Grafana 13.x panel-editing flow incompatibility.
+- Added `playwright-report` to cspell ignore paths.
 - Re-pinned `@grafana/tsconfig` to `2.0.1` (exact); 2.1.0 changed `moduleResolution` to `bundler`,
   incompatible with the scaffolded ts-node `commonjs` override and breaking `npm run build`.
 - Updated dependencies: @grafana/i18n, @grafana/plugin-e2e, @swc/core, @swc/helpers, @tanstack/react-virtual,
