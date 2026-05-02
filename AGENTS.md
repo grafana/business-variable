@@ -453,7 +453,8 @@ concretely ("Always use X for Y"), never abstractly ("be careful with Y"). If an
 covers the correction, tighten it instead of adding a new one. Remove lines when the underlying issue goes
 away (model upgrades, refactors, process changes).
 
-- (empty)
+- Always keep `workers: 1` in `playwright.config.ts` — all E2E tests share one Grafana instance and
+  parallel execution causes state interference (`locator.click: Test ended` in CI).
 
 ---
 
