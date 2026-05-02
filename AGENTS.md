@@ -431,8 +431,15 @@ Flat config (ESLint 9) extending
 
 ### Policies
 
-**Changelog:** Every commit that modifies code, documentation, dependencies, or configuration must have a
-corresponding entry in `CHANGELOG.md` under `## [Unreleased]`. Include it in the same commit or as a
+**Changelog:** This project maintains two changelog files:
+
+- `CHANGELOG.md` — end-user facing. Features, bug fixes, breaking changes, Grafana compatibility.
+- `src/CHANGELOG.md` — developer facing. Dependencies, CI/CD, build tooling, ESLint, Docker, test
+  infrastructure. Subsections in order: `### Build / Tooling`, `### Code Quality`, `### E2E / Docker`,
+  `### Dependencies`.
+
+Every commit that modifies code, documentation, dependencies, or configuration must have a corresponding
+entry in the appropriate file(s) under `## [Unreleased]`. Include it in the same commit or as a
 follow-up commit before pushing.
 
 **Branching:** Never commit directly to `main`. Use descriptive branch names (`feat/add-feature`,
