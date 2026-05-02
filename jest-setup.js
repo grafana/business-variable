@@ -20,8 +20,8 @@ Object.assign(global, { TextDecoder, TextEncoder });
  */
 const originalConsoleInfo = console.info;
 console.info = (...args) => {
-  const message = args.map((arg) => (typeof arg === 'string' ? arg : '')).join(' ');
-  if (message.includes('i18next is made possible') || message.includes('Locize')) {
+  const first = String(args[0] ?? '');
+  if (first.includes('i18next is made possible') || first.includes('Locize')) {
     return;
   }
   originalConsoleInfo(...args);

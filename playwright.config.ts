@@ -29,7 +29,8 @@ export default defineConfig<PluginOptions>({
   retries: process.env.CI ? 2 : 0,
 
   /**
-   * Single worker — all tests share one Grafana instance, parallel execution causes state interference.
+   * Single worker — all tests share one Grafana instance, parallel execution causes state
+   * interference. fullyParallel has no effect with workers: 1 but is kept for when this changes.
    */
   workers: 1,
 
