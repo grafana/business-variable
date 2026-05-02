@@ -1,12 +1,13 @@
-import { dirname } from 'path';
+import type { PluginOptions } from '@grafana/plugin-e2e';
 import { defineConfig, devices } from '@playwright/test';
+import { dirname } from 'node:path';
 
 const pluginE2eAuth = `${dirname(require.resolve('@grafana/plugin-e2e'))}/auth`;
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-export default defineConfig({
+export default defineConfig<PluginOptions>({
   /**
    * Directory with tests
    */
@@ -18,14 +19,14 @@ export default defineConfig({
   fullyParallel: true,
 
   /**
-   * Number of retry.
+   * Fail the build on CI if you accidentally left test.only in the source code.
    */
-  retries: 6,
+  forbidOnly: !!process.env.CI,
 
   /**
-   * Number of workers.
+   * Retry on CI only.
    */
-  workers: 1,
+  retries: process.env.CI ? 2 : 0,
 
   /**
    * Reporter to use. See https://playwright.dev/docs/test-reporters
