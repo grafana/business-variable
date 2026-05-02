@@ -400,10 +400,8 @@ if they are legitimate.
 
 #### ESLint
 
-Flat config (ESLint 9) extending
-`@grafana/eslint-config/flat.js`,
-`@volkovlabs/eslint-config`, and
-`eslint-config-prettier`. Key rules:
+Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js` and `eslint-config-prettier`,
+with inline rules for import sorting and naming conventions. Key rules:
 
 - `@typescript-eslint/no-empty-object-type: off`
 - `@typescript-eslint/no-deprecated: warn` — avoid deprecated APIs
@@ -428,6 +426,8 @@ Flat config (ESLint 9) extending
 - Commit without the user's explicit instruction
 - Push without the user's explicit instruction
 - Chain `git commit && git push` in one command
+- Add AI attribution (e.g., "Generated with Claude Code") to PR summaries, commit messages, or any
+  project artifact
 
 ### Policies
 
@@ -442,9 +442,16 @@ Every commit that modifies code, documentation, dependencies, or configuration m
 entry in the appropriate file(s) under `## [Unreleased]`. Include it in the same commit or as a
 follow-up commit before pushing.
 
+**Typecheck:** Always run `npm run typecheck` when `src/` files are changed and fix any type errors
+before committing.
+
 **Branching:** Never commit directly to `main`. Use descriptive branch names (`feat/add-feature`,
-`fix/bug-description`). Always open PRs as drafts (`gh pr create --draft`). Update the PR summary when
-pushing new commits to an existing PR.
+`fix/bug-description`). Always open PRs as drafts (`gh pr create --draft`).
+
+**After pushing, always update the PR summary** if a PR exists for the current branch. Treat push and
+PR update as an atomic pair — never stop between them. Use `gh pr edit` to update the title and body
+with well-formatted text reflecting all changes across the entire branch. Wrap PR summary lines at 120
+characters — use the full width, do not wrap shorter than necessary.
 
 **E2E:** Use `@grafana/plugin-e2e` for E2E tests. Grafana API docs:
 <https://grafana.com/developers/plugin-tools/llms.txt>
