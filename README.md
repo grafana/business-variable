@@ -1,5 +1,7 @@
 # Business Variable for Grafana
 
+[![Marketplace](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins%2Fvolkovlabs-variable-panel&label=Marketplace&query=%24.version&prefix=v&color=orange)](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/)
+[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins%2Fvolkovlabs-variable-panel&label=Downloads&query=%24.downloads&color=blue)](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/)
 [![CI](https://github.com/grafana/business-variable/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-variable/actions/workflows/push.yml)
 [![CD](https://github.com/grafana/business-variable/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-variable/actions/workflows/publish.yml)
 [![License](https://img.shields.io/github/license/grafana/business-variable)](https://github.com/grafana/business-variable/blob/main/LICENSE)

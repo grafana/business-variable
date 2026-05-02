@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   config with `PluginOptions`. Kept `workers: 1` — all tests share one Grafana instance and
   parallel execution causes state interference.
 - Updated `packageManager` to `npm@11.13.0`.
+- Added Marketplace and Downloads badges to `README.md`.
 - Re-pinned `@grafana/tsconfig` to `2.0.1` (exact); 2.1.0 changed `moduleResolution` to `bundler`,
   incompatible with the scaffolded ts-node `commonjs` override and breaking `npm run build`.
 - Updated dependencies: @grafana/i18n, @grafana/plugin-e2e, @swc/core, @swc/helpers, @tanstack/react-virtual,
