@@ -426,6 +426,8 @@ with inline rules for import sorting and naming conventions. Key rules:
 - Commit without the user's explicit instruction
 - Push without the user's explicit instruction
 - Chain `git commit && git push` in one command
+- Never add AI attribution (e.g., "Generated with Claude Code") to PR summaries, commit messages, or
+  any other project artifacts
 - Add AI attribution (e.g., "Generated with Claude Code") to PR summaries, commit messages, or any
   project artifact
 
