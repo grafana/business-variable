@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   BuildKit npm cache mount to match `business-table`.
 - Updated `playwright.config.ts`: added `forbidOnly`, changed retries to CI-only (2), typed
   config with `PluginOptions`, removed hardcoded `workers: 1`.
+- Updated `packageManager` to `npm@11.13.0`.
 - Re-pinned `@grafana/tsconfig` to `2.0.1` (exact); 2.1.0 changed `moduleResolution` to `bundler`,
   incompatible with the scaffolded ts-node `commonjs` override and breaking `npm run build`.
 - Updated dependencies: @grafana/i18n, @grafana/plugin-e2e, @swc/core, @swc/helpers, @tanstack/react-virtual,
