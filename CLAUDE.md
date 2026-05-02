@@ -1,1 +1,1 @@
-<include>AGENTS.md</include>
+AGENTS.md

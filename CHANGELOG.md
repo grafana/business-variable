@@ -1,4 +1,4 @@
-# Change Log
+# Changelog
 
 All notable changes to the **Business Variable Panel** for Grafana
 are documented in this file. This panel provides advanced variable
@@ -8,51 +8,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-### Changed
+### Project Updates
 
-- Upgraded Node to v24 and migrated to latest
-  `@grafana/create-plugin` scaffolding.
-- Updated all package dependencies via `npm update`.
-- Bumped `@emotion/css` to 11.13.5 and
-  `@tanstack/react-virtual` to 3.13.23.
-- Replaced deprecated `react-beautiful-dnd` with
-  `@hello-pangea/dnd` (drop-in fork).
-- Updated Playwright Docker image to v1.59.1 to match
-  `@playwright/test` package version.
-- Renamed `timescale/` directory to `timescale-setup/`;
-  switched Dockerfile from `yarn` to `npm` and bumped
-  `docker-compose-wait` from 2.9.0 to 2.12.1.
-- Simplified docker-compose: removed legacy `grafana-dev`,
-  `grafana-main`, and `grafana-dep` services; consolidated
-  profiles to `dev` and `playwright`.
-- Simplified npm scripts: removed `start:dep`/`start:main`,
-  updated `test:e2e:docker` to use `playwright` profile,
-  added `--coverage` to `test:ci`, and added `--volumes`
-  to `stop` for clean database restarts.
-
-### Fixed
-
-- Fixed all React Compiler lint errors (refs during render,
-  setState in effects, useMemo dependency mismatches).
-- Suppressed `react-hooks/incompatible-library` warning
-  for TanStack Table's `useReactTable()` call.
-- Fixed SQL injection pattern in timescale server by using
-  parameterized queries.
-- Added healthcheck to Grafana service in docker-compose to
-  prevent Playwright ECONNREFUSED errors in CI.
-- Fixed brittle sticky header height E2E assertion to use a
-  regex range instead of exact pixel value.
-- Fixed unawaited Playwright actions in E2E test helpers
-  causing React 19 race conditions.
-
-### Added
-
-- Added `AGENTS.md` with build/lint/test commands, coding
-  conventions, and branching policy for AI coding agents.
-- Added `cspell.config.json` for spell checking.
-- Added `.markdownlint.yaml` with 120 char line length.
-- Added CI workflows for Jest coverage report and PR file
-  changes summary.
+- React 19 compatibility: applied `externalize-jsx-runtime` via `@grafana/create-plugin`, confirmed `grafanaDependency >=12.3.0`, removed deprecated `@types/testing-library__jest-dom`.
+- Updated CI/CD workflows.
+- Updated development scripts and tooling.
+- Synced GitHub Actions workflows with business-text: upgraded action pins (create-github-app-token v3.1.1,
+  setup-node v6.4.0, changed-files v47.0.6, github-script v9.0.0, vitest-coverage-report-action v2.11.2),
+  added coverage-detail job, concurrency block to coverage and pr-files workflows, fixed base-branch
+  node-version-file, src/CHANGELOG.md support in publish workflow, .dockerignore in pr-files config.
+- Merged CLAUDE.md project context into AGENTS.md Section 10; CLAUDE.md is now a symlink to AGENTS.md.
 
 ## [5.1.0] - 2025-10-29
 
