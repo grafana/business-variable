@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Project Updates
 
+- Updated dependencies: @grafana/i18n, @grafana/plugin-e2e, @swc/core, @swc/helpers, @tanstack/react-virtual, @types/node, @typescript-eslint/eslint-plugin, @typescript-eslint/parser, eslint-plugin-react-hooks, prettier, sass, terser-webpack-plugin, webpack. Pinned @grafana/tsconfig to 2.0.1 (2.1.0 incompatible with scaffolded ts-node config).
 - React 19 compatibility: applied `externalize-jsx-runtime` via `@grafana/create-plugin`, confirmed `grafanaDependency >=12.3.0`, removed deprecated `@types/testing-library__jest-dom`.
 - Updated CI/CD workflows.
 - Updated development scripts and tooling.
