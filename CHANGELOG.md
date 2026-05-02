@@ -10,8 +10,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Project Updates
 
-- Updated dependencies: @grafana/i18n, @grafana/plugin-e2e, @swc/core, @swc/helpers, @tanstack/react-virtual, @types/node, @typescript-eslint/eslint-plugin, @typescript-eslint/parser, eslint-plugin-react-hooks, prettier, sass, terser-webpack-plugin, webpack. Pinned @grafana/tsconfig to 2.0.1 (2.1.0 incompatible with scaffolded ts-node config).
-- React 19 compatibility: applied `externalize-jsx-runtime` via `@grafana/create-plugin`, confirmed `grafanaDependency >=12.3.0`, removed deprecated `@types/testing-library__jest-dom`.
+- Updated dependencies: @grafana/i18n, @grafana/plugin-e2e, @swc/core, @swc/helpers, @tanstack/react-virtual,
+  @types/node, @typescript-eslint/eslint-plugin, @typescript-eslint/parser, eslint-plugin-react-hooks, prettier,
+  sass, terser-webpack-plugin, webpack. Pinned @grafana/tsconfig to 2.0.1 (2.1.0 incompatible with scaffolded
+  ts-node config).
+- React 19 compatibility: applied `externalize-jsx-runtime` via `@grafana/create-plugin`, confirmed
+  `grafanaDependency >=12.3.0`, removed deprecated `@types/testing-library__jest-dom`.
 - Updated CI/CD workflows.
 - Updated development scripts and tooling.
 - Synced GitHub Actions workflows with business-text: upgraded action pins (create-github-app-token v3.1.1,
@@ -19,8 +23,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   added coverage-detail job, concurrency block to coverage and pr-files workflows, fixed base-branch
   node-version-file, src/CHANGELOG.md support in publish workflow, .dockerignore in pr-files config.
 - Merged CLAUDE.md project context into AGENTS.md Section 10; CLAUDE.md is now a symlink to AGENTS.md.
-- Replaced `@volkovlabs/eslint-config` with inline ESLint rules (`eslint-plugin-simple-import-sort`, naming conventions, `no-console`, `no-deprecated`) matching the business-forms/business-text pattern.
-- Optimized `test/Dockerfile`: layer-cached dependency install, `npm ci --omit=prod`, selective COPY, removed redundant browser install step.
+- Replaced `@volkovlabs/eslint-config` with inline ESLint rules (`eslint-plugin-simple-import-sort`,
+  naming conventions, `no-console`, `no-deprecated`) matching the business-forms/business-text pattern.
+- Optimized `test/Dockerfile`: layer-cached dependency install, `npm ci --omit=prod`, selective COPY,
+  removed redundant browser install step.
 
 ## [5.1.0] - 2025-10-29
 
