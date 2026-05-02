@@ -40,6 +40,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   naming conventions, `no-console`, `no-deprecated`) matching the business-forms/business-text pattern.
 - Optimized `test/Dockerfile`: layer-cached dependency install, `npm ci --omit=prod`, selective COPY,
   removed redundant browser install step.
+- Removed two unused `eslint-disable react-hooks/set-state-in-effect` comments (`DrawerTable.tsx`,
+  `useContentSizes.ts`) that were orphaned after the `@volkovlabs/eslint-config` replacement.
 
 ## [5.1.0] - 2025-10-29
 

@@ -37,7 +37,6 @@ export const useContentSizes = ({
         topOffset += headerRef.current.clientHeight;
       }
 
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- DOM measurement sync
       setTableTopOffset(topOffset);
     }
   }, [tableData, height, options.groups]);
