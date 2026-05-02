@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Project Updates
 
+- Suppressed i18next/Locize marketing banner in Jest output (`jest-setup.js`).
 - Updated dependencies: @grafana/i18n, @grafana/plugin-e2e, @swc/core, @swc/helpers, @tanstack/react-virtual,
   @types/node, @typescript-eslint/eslint-plugin, @typescript-eslint/parser, eslint-plugin-react-hooks, prettier,
   sass, terser-webpack-plugin, webpack. Pinned @grafana/tsconfig to 2.0.1 (2.1.0 incompatible with scaffolded
