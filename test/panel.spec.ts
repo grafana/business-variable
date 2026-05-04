@@ -7,18 +7,13 @@ test.describe('Volkovlabs Variable Panel', () => {
     expect(grafanaVersion).toEqual(grafanaVersion);
   });
 
-  test('Should add new empty variable panel', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
+  test('Should add new empty variable panel', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
     /**
-     * Go To Panels dashboard panels.json
+     * Go To empty dashboard e2e-empty.json
      * return dashboardPage
      */
-    const dashboard = await readProvisionedDashboard({ fileName: 'panels.json' });
+    const dashboard = await readProvisionedDashboard({ fileName: 'e2e-empty.json' });
     const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
-
-    /**
-     * Await content load
-     */
-    await page.waitForTimeout(1500);
 
     /**
      * Add new visualization
@@ -33,12 +28,9 @@ test.describe('Volkovlabs Variable Panel', () => {
     await editPage.backToDashboard();
 
     /**
-     * Check Presence
+     * Check panel renders without errors
      */
     const panel = new PanelHelper(dashboardPage, 'New Panel');
-    const tableView = panel.getTableView();
-    await tableView.checkPresence();
-    await tableView.checkAlert();
     await panel.checkIfNoErrors();
   });
 

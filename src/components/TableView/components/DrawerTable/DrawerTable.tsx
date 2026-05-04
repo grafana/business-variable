@@ -155,7 +155,6 @@ export const DrawerTable = <TTableData extends TableItem>({
 
   useLayoutEffect(() => {
     if (drawerContainer.current && scrollDrawerContainer.current) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- deferred render after refs mount
       setIsReady(true);
     }
   }, []);

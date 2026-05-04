@@ -1,17 +1,17 @@
-# Get the latest version of Playwright
+# syntax=docker/dockerfile:1.7
+
 FROM mcr.microsoft.com/playwright:v1.59.1-noble
 
-# Set the work directory for the application
-WORKDIR app
+WORKDIR /app
 
-# COPY the needed files to the app folder in Docker image
-COPY .. .
+# Copy manifests first so the install layer is cached until dependencies change
+COPY package.json package-lock.json ./
 
-# Install the dependencies in Node environment
-RUN npm install --only=dev
+RUN --mount=type=cache,target=/root/.npm npm ci --prefer-offline
 
-# Install browsers
-RUN npx playwright install --with-deps chromium
+# Copy config and provisioned dashboards (provisioning/ is not volume-mounted at runtime)
+COPY playwright.config.ts tsconfig.json ./
+COPY provisioning/ provisioning/
+COPY src/ src/
 
-# Run tests
 CMD ["npm", "run", "test:e2e"]
