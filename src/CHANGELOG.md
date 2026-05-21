@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [5.2.0] - 2026-05-21
 
 ### Build / Tooling
 
@@ -13,7 +13,9 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Added Marketplace and Downloads badges to `README.md`.
 - Added `playwright-report` to cspell ignore paths.
 - Synced GitHub Actions workflows with business-text: upgraded action pins, added coverage-detail job,
-  concurrency blocks, `src/CHANGELOG.md` support in publish workflow, `.dockerignore` in pr-files config.
+  concurrency blocks, `src/CHANGELOG.md` support in publish workflow.
+- Migrated publish workflow from auto-stamping changelog to pre-flight changelog validation.
+- Bumped `vitest-coverage-report-action` to v2.12.0.
 
 ### Code Quality
 
