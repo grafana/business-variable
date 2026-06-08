@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { getJestSelectors } from '@volkovlabs/jest-selectors';
+import { getJestSelectors } from '../../../../test-utils/jest-selectors';
 import React, { useRef } from 'react';
 
 import { TEST_IDS } from '../../../../constants';

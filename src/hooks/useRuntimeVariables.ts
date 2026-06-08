@@ -1,9 +1,9 @@
 import { EventBus } from '@grafana/data';
-import { useDashboardVariables } from '@volkovlabs/components';
 
 import { REQUEST_LATENCY_MODE_OPTIONS } from '../constants';
 import { RequestLatencyMode, RuntimeVariable } from '../types';
 import { getVariablesMap } from '../utils';
+import { useDashboardVariables } from './useDashboardVariables';
 
 /**
  * Runtime Variables

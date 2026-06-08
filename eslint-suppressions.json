@@ -1,0 +1,23 @@
+{
+  "src/components/NumberInput/NumberInput.tsx": {
+    "react-hooks/exhaustive-deps": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "src/hooks/useDashboardVariables.ts": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "src/test-utils/jest-selectors.ts": {
+    "no-redeclare": {
+      "count": 2
+    }
+  }
+}
