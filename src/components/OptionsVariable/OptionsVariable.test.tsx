@@ -1,6 +1,6 @@
 import { Select } from '@grafana/ui';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { getJestSelectors } from '@volkovlabs/jest-selectors';
+import { getJestSelectors } from '../../test-utils/jest-selectors';
 import React from 'react';
 
 import { ALL_VALUE, ALL_VALUE_PARAMETER, NO_VALUE_PARAMETER, TEST_IDS } from '../../constants';

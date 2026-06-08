@@ -6,6 +6,12 @@ management and visualization capabilities for Grafana dashboards.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Project Updates
+
+- Removed dependencies on `@volkovlabs/components` and `@volkovlabs/jest-selectors`. The previously-used symbols (`DatasourceEditor`, `DatasourcePayloadEditor` impl, `NumberInput`, `useDashboardVariables`, `useDatasourceRequest`) are now inlined under `src/components/`, `src/hooks/`, and `src/utils/`. Jest selector helpers (`getJestSelectors`, `createSelector`) are inlined under `src/test-utils/jest-selectors.ts`. Pre-existing rule violations surfaced by lint are captured in `eslint-suppressions.json`.
+
 ## [5.2.0] - 2026-05-21
 
 ### Breaking changes

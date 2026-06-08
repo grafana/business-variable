@@ -1,10 +1,19 @@
 import { LoadingState, toDataFrame } from '@grafana/data';
 import { act, renderHook, RenderHookResult, waitFor } from '@testing-library/react';
-import { useDatasourceRequest } from '@volkovlabs/components';
 
 import { FavoritesStorage } from '../types';
 import { createFavoritesConfig } from '../utils';
+import { useDatasourceRequest } from './useDatasourceRequest';
 import { useFavorites } from './useFavorites';
+
+/**
+ * Mock the (now-inlined) useDatasourceRequest hook.
+ * Previously globally mocked via src/__mocks__/@volkovlabs/components.tsx.
+ */
+jest.mock('./useDatasourceRequest', () => ({
+  ...jest.requireActual('./useDatasourceRequest'),
+  useDatasourceRequest: jest.fn(),
+}));
 
 /**
  * Local Storage

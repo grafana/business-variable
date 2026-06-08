@@ -1,10 +1,10 @@
 import { StandardEditorProps } from '@grafana/data';
 import { Button, ButtonGroup, InlineField, InlineFieldRow, Input, Select, useStyles2 } from '@grafana/ui';
-import { NumberInput } from '@volkovlabs/components';
 import React from 'react';
 
 import { TEST_IDS } from '../../constants';
 import { PanelOptions, StatusStyleMode, StatusStyleOptions } from '../../types';
+import { NumberInput } from '../NumberInput';
 import { getStyles } from './StatusStyleEditor.styles';
 
 /**
