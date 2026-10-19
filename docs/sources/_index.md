@@ -16,6 +16,8 @@ The Business Variable panel builds on top of regular dashboard variables. You ca
 
 The Business Variable panel offers many layouts with robust options, including an advanced TreeView layout. With the latest updates, you can [switch between dashboards](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/features/redirect/) for a better user experience.
 
+{{< docs/play title="Business Variable" url="https://play.grafana.org/d/dffwd7y5pva60wa/" >}}
+
 ## Requirements
 
 - Business Variable panel 4.X requires **Grafana 11** or **Grafana 12**.
