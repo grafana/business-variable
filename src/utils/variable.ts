@@ -263,13 +263,10 @@ export const getRuntimeVariable = (variable: TypedVariableModel): RuntimeVariabl
  * Get Variables Map
  */
 export const getVariablesMap = (variables: TypedVariableModel[]): Record<string, RuntimeVariable> => {
-  return variables.reduce((acc, variable) => {
+  return variables.reduce<Record<string, RuntimeVariable>>((acc, variable) => {
     const runtimeVariable = getRuntimeVariable(variable);
     if (runtimeVariable) {
-      return {
-        ...acc,
-        [runtimeVariable.name]: runtimeVariable,
-      };
+      acc[runtimeVariable.name] = runtimeVariable;
     }
     return acc;
   }, {});
