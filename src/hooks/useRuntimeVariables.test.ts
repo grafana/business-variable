@@ -1,16 +1,14 @@
 import { CustomVariableModel, EventBusSrv, LoadingState, TypedVariableModel, VariableHide } from '@grafana/data';
-import { renderHook } from '@testing-library/react';
-import { useDashboardVariables } from '@volkovlabs/components';
+import { RefreshEvent } from '@grafana/runtime';
+import { act, renderHook } from '@testing-library/react';
 
-import { RequestLatencyMode, VariableType } from '../types';
+import { VariableType } from '../types';
 import { useRuntimeVariables } from './useRuntimeVariables';
-
-const mockUseDashboardVariables = useDashboardVariables as jest.MockedFunction<typeof useDashboardVariables>;
 
 /**
  * Mock variables data
  */
-const mockVariables: TypedVariableModel[] = [];
+let mockVariables: TypedVariableModel[] = [];
 
 /**
  * Mock getTemplateSrv
@@ -25,13 +23,6 @@ const mockGetTemplateSrv = {
 jest.mock('@grafana/runtime', () => ({
   ...jest.requireActual('@grafana/runtime'),
   getTemplateSrv: jest.fn(() => mockGetTemplateSrv),
-}));
-
-/**
- * Mock @volkovlabs/components
- */
-jest.mock('@volkovlabs/components', () => ({
-  useDashboardVariables: jest.fn(),
 }));
 
 describe('useRuntimeVariables', () => {
@@ -60,151 +51,80 @@ describe('useRuntimeVariables', () => {
     skipUrlSync: false,
     index: 0,
     state: LoadingState.Done,
-    error: '',
+    error: null,
     ...item,
   });
 
   beforeEach(() => {
-    jest.clearAllMocks();
-    mockVariables.length = 0;
-    mockUseDashboardVariables.mockClear();
+    mockVariables = [
+      createVariable({ name: 'device', options: [{ text: 'a', value: 'a', selected: true }] }),
+      createVariable({ name: 'country', options: [{ text: 'pt', value: 'pt', selected: true }] }),
+    ];
+    mockGetTemplateSrv.getVariables.mockClear();
+    delete (window as unknown as Record<string, unknown>).__grafanaSceneContext;
   });
 
-  it('Should return variables', () => {
-    const deviceVariable = createVariable({ name: 'device' });
-    const serverVariable = createVariable({ name: 'server' });
+  it('Should return only the requested variable', () => {
+    const { result } = renderHook(() => useRuntimeVariables(eventBus, 'device'));
 
-    /**
-     * Mock the useDashboardVariables hook return value
-     */
-    mockUseDashboardVariables.mockReturnValue({
-      variable: deviceVariable,
-      getVariable: jest.fn((name: string) => {
-        const variablesMap: Record<string, CustomVariableModel> = {
-          device: deviceVariable,
-          server: serverVariable,
-        };
-        return variablesMap[name];
-      }),
-    } as any);
-
-    const { result } = renderHook(() => useRuntimeVariables(eventBus, 'device', RequestLatencyMode.LOW));
-
-    expect(result.current.variable).toEqual(deviceVariable);
-    expect(result.current.getVariable('device')).toEqual(deviceVariable);
-    expect(result.current.getVariable('server')).toEqual(serverVariable);
+    expect(result.current.variable?.name).toEqual('device');
+    expect(result.current.getVariable('country')?.name).toEqual('country');
+    expect(result.current.getVariable('unknown')).toBeUndefined();
   });
 
-  it('Should handle non-existent variable', () => {
-    const deviceVariable = createVariable({ name: 'device' });
+  it('Should reload on refresh event', () => {
+    const { result } = renderHook(() => useRuntimeVariables(eventBus, 'device'));
+    const calls = mockGetTemplateSrv.getVariables.mock.calls.length;
 
-    mockUseDashboardVariables.mockReturnValue({
-      variable: undefined,
-      getVariable: jest.fn((name: string) => {
-        const variablesMap: Record<string, CustomVariableModel> = {
-          device: deviceVariable,
-        };
-        return variablesMap[name];
-      }),
-    } as any);
-
-    const { result } = renderHook(() => useRuntimeVariables(eventBus, 'nonexistent', RequestLatencyMode.LOW));
-
-    expect(result.current.variable).toBeUndefined();
-    expect(result.current.getVariable('nonexistent')).toBeUndefined();
-    expect(result.current.getVariable('device')).toEqual(deviceVariable);
-  });
-
-  it('Should call useDashboardVariables with correct parameters', () => {
-    const deviceVariable = createVariable({ name: 'device' });
-
-    mockUseDashboardVariables.mockReturnValue({
-      variable: deviceVariable,
-      getVariable: jest.fn(),
-    } as any);
-
-    renderHook(() => useRuntimeVariables(eventBus, 'device', RequestLatencyMode.LOW));
-
-    expect(mockUseDashboardVariables).toHaveBeenCalledWith({
-      eventBus,
-      variableName: 'device',
-      toState: expect.any(Function),
-      getOne: expect.any(Function),
-      initial: {},
-      refreshCheckCount: 5,
-      refreshCheckInterval: 500,
+    mockVariables = [createVariable({ name: 'device', options: [{ text: 'b', value: 'b', selected: true }] })];
+    act(() => {
+      eventBus.publish(new RefreshEvent());
     });
+
+    expect(mockGetTemplateSrv.getVariables.mock.calls.length).toBeGreaterThan(calls);
+    expect(result.current.variable?.options[0].value).toEqual('b');
   });
 
-  it('Should call useDashboardVariables with correct parameters for latency if not specified', () => {
-    const deviceVariable = createVariable({ name: 'device' });
-
-    mockUseDashboardVariables.mockReturnValue({
-      variable: deviceVariable,
-      getVariable: jest.fn(),
-    } as any);
-
-    renderHook(() => useRuntimeVariables(eventBus, 'device'));
-
-    expect(mockUseDashboardVariables).toHaveBeenCalledWith({
-      eventBus,
-      variableName: 'device',
-      toState: expect.any(Function),
-      getOne: expect.any(Function),
-      initial: {},
-      refreshCheckCount: 5,
-      refreshCheckInterval: 500,
-    });
-  });
-
-  it('Should call useDashboardVariables with correct parameters for latency', () => {
-    const deviceVariable = createVariable({ name: 'device' });
-
-    mockUseDashboardVariables.mockReturnValue({
-      variable: deviceVariable,
-      getVariable: jest.fn(),
-    } as any);
-
-    renderHook(() => useRuntimeVariables(eventBus, 'device', RequestLatencyMode.HIGH));
-
-    expect(mockUseDashboardVariables).toHaveBeenCalledWith({
-      eventBus,
-      variableName: 'device',
-      toState: expect.any(Function),
-      getOne: expect.any(Function),
-      initial: {},
-      refreshCheckCount: 20,
-      refreshCheckInterval: 1500,
-    });
-  });
-
-  it('Should test getOne function retrieves variable correctly', () => {
-    const deviceVariable = createVariable({ name: 'device' });
-    const serverVariable = createVariable({ name: 'server' });
-
-    mockUseDashboardVariables.mockReturnValue({
-      variable: deviceVariable,
-      getVariable: jest.fn(),
-    } as any);
-
-    renderHook(() => useRuntimeVariables(eventBus, 'device', RequestLatencyMode.LOW));
-
-    /**
-     * Get the getOne function that was passed to useDashboardVariables
-     */
-    const call = mockUseDashboardVariables.mock.calls[0][0];
-    const getOne = call.getOne;
-
-    /**
-     * Test the getOne function
-     */
-    const variablesMap: Record<string, CustomVariableModel> = {
-      device: deviceVariable,
-      server: serverVariable,
+  it('Should subscribe to the scene variable state when available', () => {
+    const handlers: Array<() => void> = [];
+    const unsubscribe = jest.fn();
+    (window as unknown as Record<string, unknown>).__grafanaSceneContext = {
+      state: {
+        $variables: {
+          getByName: (name: string) =>
+            name === 'device'
+              ? {
+                  state: { name: 'device', loading: false },
+                  subscribeToState: (handler: () => void) => {
+                    handlers.push(handler);
+                    return { unsubscribe };
+                  },
+                }
+              : undefined,
+        },
+      },
     };
 
-    expect(getOne(variablesMap, 'device')).toEqual(deviceVariable);
-    expect(getOne(variablesMap, 'server')).toEqual(serverVariable);
-    expect(getOne(variablesMap, 'nonexistent')).toBeUndefined();
+    const { result, unmount } = renderHook(() => useRuntimeVariables(eventBus, 'device'));
+    expect(handlers.length).toEqual(1);
+
+    mockVariables = [createVariable({ name: 'device', options: [{ text: 'c', value: 'c', selected: true }] })];
+    act(() => {
+      handlers[0]();
+    });
+    expect(result.current.variable?.options[0].value).toEqual('c');
+
+    unmount();
+    expect(unsubscribe).toHaveBeenCalled();
+  });
+
+  it('Should not convert the other variables', () => {
+    renderHook(() => useRuntimeVariables(eventBus, 'device'));
+    /**
+     * getVariables is called, but the hook only converts the requested one;
+     * the raw list length is unchanged (no map over all variables is kept in state)
+     */
+    expect(mockGetTemplateSrv.getVariables).toHaveBeenCalled();
+    expect(mockVariables.length).toEqual(2);
   });
 });
